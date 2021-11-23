@@ -4,13 +4,27 @@
 html, body {
 	min-height: 100%;
 	background: brown;
-	color: #000;
+	background-image: url("images/sunsoil.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: #EEE;
+}
+
+.field {
+	display: block;
+	margin: 20px;
+	padding: 20px;
+	/* background: rgba(76, 175, 80, 0.3); */
 }
 
 h1 {
 	font-size: 1.4rem;
+	color: yellowGreen;
 }
 
+p	{
+	text-shadow: 0 0 10px darkgreen;
+}
 
 
 .right {
