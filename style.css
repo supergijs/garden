@@ -8,22 +8,112 @@ html, body {
 	background-repeat: no-repeat;
 	background-size: cover;
 	color: #EEE;
+	/* cursor: crosshair; */
+	/* cursor: url("images/whitespade.png"), crosshair; */
+	cursor: url("images/tinyspade.png") 0 31, crosshair;
 }
 
 .field {
-	display: block;
-	margin: 0px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 320px;
+	height: 150px;
 	padding: 20px;
-	/* background: rgba(76, 175, 80, 0.3); */
+	text-align: center;
+	/* background: rgba(255,245,235, 1); */
+	border: 3px solid;
+	cursor: crosshair;
+}
+
+.item {
+	-webkit-filter: drop-shadow(5px 5px 5px yellow);
+  filter: drop-shadow(5px 5px 5px yellow);
+}
+
+#hand {
+	width: 100px;
+	right: 10%;
+	bottom: 20%;
+	position: absolute;
+}
+
+#planethand {
+	width: 100px;
+	right: 20%;
+	bottom: 5%;
+	position: absolute;
 }
 
 h1 {
-	font-size: 1.4rem;
-	color: yellowGreen;
+	font-size: 1.2rem;
+	/* color: black; */
+	text-shadow: 0 0 10px darkgreen;
 }
 
 p	{
-	text-shadow: 0 0 10px darkgreen;
+	text-shadow: 0 0 7px darkgreen;
+}
+
+.label h2 {
+	color: yellow;
+	text-align: center;
+	margin: 0px;
+}
+
+.label {
+	display: inline-block;
+	height: 45px;
+	width: 110px;
+	padding: 5px;
+	border: 1px solid yellow;
+	position:absolute;
+}
+
+#left {
+	left:0;
+	top: 50%;
+	margin-top: -22px;
+}
+#right {
+	right:0;
+	top: 50%;
+	margin-top: -22px;
+}
+#top {
+	right:50%;
+	top: 0;
+	margin-right: -55px;
+}
+#bottom {
+	right:50%;
+	bottom: 0;
+	margin-right: -55px;
+}
+
+#crosshair-h {
+    /* width:80vw; */
+		left: 130px;
+		right:130px;
+    height:3px;
+    top:50%;
+    position: fixed;
+    z-index: 6000 !important;
+}
+
+#crosshair-v{
+    /* height:84vh; */
+    width:3px;
+    left:50%;
+    position:fixed;
+    top: 60px;
+		bottom: 60px;
+    z-index: 6001 !important;
+}
+
+.hair{
+    background-color:rgba(255,255,0,0.9);
+    pointer-events:none;
 }
 
 
