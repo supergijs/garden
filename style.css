@@ -2,59 +2,207 @@
 	box-sizing: border-box;
 }
 html, body {
-	min-height: 100%;
-	background: brown;
+	cursor: url("images/tinyspade.png") 0 31, crosshair;
+	height: 100%;
+  margin: 0;
+}
+
+.ground {
+	background: darkgoldenrod;
+  animation: fade 10s infinite alternate;
 	background-image: url("images/sunsoil.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
+	background-repeat: repeat;
+	background-position: center;
+	background-blend-mode: color-burn;
 	color: #EEE;
 	/* cursor: crosshair; */
 	/* cursor: url("images/whitespade.png"), crosshair; */
-	cursor: url("images/tinyspade.png") 0 31, crosshair;
+	/* filter: blur(8px);
+	-webkit-filter: blur(8px); */
+	height: 100%;
+	width: 100%;
 }
 
-.field {
-	position: fixed;
-	top: 0;
-	right: 0;
-	width: 320px;
-	height: 150px;
-	padding: 20px;
-	text-align: center;
-	/* background: rgba(255,245,235, 1); */
-	border: 3px solid;
+@keyframes fade {
+  0%   {background-color: darkgoldenrod;}
+	25%  {background-color: darkgrey;}
+	50%  {background-color: darkkhaki;}
+  75%  {background-color: darkseagreen;}
+  100% {background-color: darkorchid;}
+	}
+
+// SIGNS
+
+#sign
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2; /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+}
+#sign:hover{
+	opacity: 1;
+}
+
+.map {
 	cursor: crosshair;
 }
 
-.item {
+#menuToggle{
+  display: block;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#map{
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased; /* to stop flickering of text in safari */
+}
+
+#map li{
+	padding: 10px 0;
+	font-size: 1.2em;
+	text-decoration: none;
+  color: #232323;
+  transition: color 0.3s ease;
+}
+
+#map > li:hover{
+  color: tomato;
+}
+
+// FAMILY TOGGLES
+.family input{
+	opacity: 1;
+	height: auto;
+	width: auto;
+}
+
+.family:checked ~ .plants{
+	display: block;
+}
+
+.plants {
+	display: none;
+}
+
+/* THE PLANTS */
+
+.plant {
+	-webkit-filter: drop-shadow(2px 2px 2px white);
+	filter: drop-shadow(2px 2px 2px white);
+	position: fixed;
+	width: 100px;
+	/* display:none; */
+}
+
+.plant:hover {
 	-webkit-filter: drop-shadow(5px 5px 5px yellow);
-  filter: drop-shadow(5px 5px 5px yellow);
+	filter: drop-shadow(5px 5px 5px yellow);
 }
 
-#hand {
-	width: 100px;
-	right: 10%;
-	bottom: 20%;
-	position: absolute;
+/* THE CARDS */
+
+.card {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.25);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+	visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+.card:target {
+		visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+	}
+a.back {
+	display: block;
+	height: 100vh;
+	width: 100vw;
 }
 
-#planethand {
-	width: 100px;
-	right: 20%;
-	bottom: 5%;
-	position: absolute;
+.card > div {
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    background: white;
+		border: 0 0 0 20px white;
+}
+.card > div::after {
+  content: "";
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  width: 300px;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 50px solid white;
 }
 
-h1 {
-	font-size: 1.2rem;
-	/* color: black; */
-	text-shadow: 0 0 10px darkgreen;
+.card-close {
+  color: #aaa;
+  line-height: 50px;
+  font-size: 80%;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 70px;
+  text-decoration: none;
 }
+
+.card-image{
+	width: 200px;
+	height: auto;
+	display: block;
+	margin: auto;
+}
+
+.card h2 {
+	font-size: 1.2em;
+	text-transform: capitalize;
+	text-align: center;
+	font-weight: normal;
+}
+
+h3 {
+	font-size: 0.8em;
+	font-weight: 100;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	}
 
 p	{
-	text-shadow: 0 0 7px darkgreen;
 }
 
+/* THE GRID */
 .label h2 {
 	color: yellow;
 	text-align: center;
@@ -66,8 +214,8 @@ p	{
 	height: 45px;
 	width: 110px;
 	padding: 5px;
-	border: 1px solid yellow;
-	position:absolute;
+	// border: 1px solid yellow;
+	position: fixed;
 }
 
 #left {
@@ -98,7 +246,7 @@ p	{
     height:3px;
     top:50%;
     position: fixed;
-    z-index: 6000 !important;
+    z-index: 1 !important;
 }
 
 #crosshair-v{
@@ -108,7 +256,7 @@ p	{
     position:fixed;
     top: 60px;
 		bottom: 60px;
-    z-index: 6001 !important;
+    z-index: 1 !important;
 }
 
 .hair{
