@@ -16,6 +16,8 @@ html, body {
 	background-position: center;
 	background-blend-mode: color-burn;
 	color: #EEE;
+	/* cursor: crosshair; */
+	/* cursor: url("images/whitespade.png"), crosshair; */
 	/* filter: blur(8px);
 	-webkit-filter: blur(8px); */
 	height: 100%;
@@ -23,80 +25,102 @@ html, body {
 }
 
 @keyframes fade {
-  0%   {background-color: rgb(134, 99, 10);}
+  0%   {background-color: darkgoldenrod;}
 	25%  {background-color: darkgrey;}
 	50%  {background-color: darkkhaki;}
   75%  {background-color: darkseagreen;}
   100% {background-color: darkorchid;}
-}
+	}
 
-/* NAV */
-nav.signs {
+// SIGNS
+
+.sign {
+	cursor: crosshair;
 	position: absolute;
 	top: 0;
+	// left: 50px;
 	z-index: 1;
-	color: #EEE;
-	font-size: 1.2em;
-	line-height: 1.5;
-	padding: 0.2em 0.4em;
-	min-width: 280px;
-	width: 25vw;
-	background-color: rgba(0,0,0, 0.25);
-	border: dotted white;
+	-webkit-user-select: none;
+	user-select: none;
 }
 
-nav h1, nav h2{
-	margin: 0;
-	font-weight: normal;
+// #sign
+// {
+//   display: block;
+//   width: 40px;
+//   height: 32px;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   // z-index: 2; /* and place it over the hamburger */
+//   -webkit-touch-callout: none;
+// 	background: green;
+// }
+//
+// #sign:hover{
+// 	width: 200px;
+// 	height: 300px;
+// 	background: lightgreen;
+// 	// z-index: 1;
+// }
+//
+// #sign:hover > *{
+// 	visibility: visible;
+// }
+
+.fam:hover{
+	visibility: visible;
 }
 
-nav h2{
-	font-size: 1.0em;
+#list{
+	position: absolute;
+	// visibility: hidden;
+	bottom: 20px;
+	width: 200px;
+	list-style:none;
 }
 
-summary:hover,label:hover,a:hover{
+#list li{
+	padding: 5px 0;
+	text-decoration: none;
+  color: darkgreen;
+  transition: color 0.3s ease;
+}
+
+#list > li:hover{
   color: tomato;
 }
 
-/* FOOTER */
-footer {
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	width: 100vw;
-	color: grey;
-	/* background: rgba(255, 255, 255, 0.25); */
-	text-align: left;
-	padding: 5px;
-	line-height: 0;
+// FAMILY TOGGLES
+.family input{
+	opacity: 1;
+	height: auto;
+	width: auto;
 }
 
-footer a{
-	color: inherit;
+.family:checked ~ .plants{
+	display: block;
+	visibility: visible;
 }
-
-/* THE PLANTS */
 
 .plants {
 	display: none;
-	/* visibility: visible; */
+	visibility: visible;
 }
+
+/* THE PLANTS */
 
 .plant {
 	-webkit-filter: drop-shadow(2px 2px 2px white);
 	filter: drop-shadow(2px 2px 2px white);
 	position: fixed;
 	width: 100px;
-	display: block;
+	/* display:none; */
 }
 
 .plant:hover {
 	-webkit-filter: drop-shadow(5px 5px 5px yellow);
 	filter: drop-shadow(5px 5px 5px yellow);
-}
-
-.plant img{
-	width:inherit;
 }
 
 /* THE CARDS */
@@ -189,8 +213,6 @@ p	{
 	color: yellow;
 	text-align: center;
 	margin: 0px;
-	font-size: 1.7rem;
-	/* line-height: 0; */
 }
 
 .label {
@@ -198,7 +220,7 @@ p	{
 	height: 45px;
 	width: 110px;
 	padding: 5px;
-	border: 1px solid yellow;
+	// border: 1px solid yellow;
 	position: fixed;
 }
 
@@ -247,6 +269,7 @@ p	{
     background-color:rgba(255,255,0,0.9);
     pointer-events:none;
 }
+
 
 .right {
 	float: right;

@@ -1,6 +1,6 @@
 <!doctype html>
-
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,104 +15,104 @@
   <meta property="og:description" content="A place to plant gathered care species.">
   <meta property="og:image" content="/images/spades.png">
 
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="stylesupport.css?v=1.0">
-
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/style.css">
+  <!-- <link rel="stylesheet" href="/stylesupport.css"> -->
 </head>
 
 <body>
+  <!-- BACKGROUND -->
   <div class="ground"></div>
 
+  <!-- GRID -->
   <div id="crosshair-h" class="hair"></div>
   <div id="crosshair-v" class="hair"></div>
-    <div class="label" id="left">
-      <h2>neglect</h2>
-    </div>
-    <div class="label" id="right">
-      <h2>care</h2>
-    </div>
-    <div class="label" id="top">
-      <h2>trust</h2>
-    </div>
-    <div class="label" id="bottom">
-      <h2>control</h2>
-    </div>
+  <div class="label" id="left">
+    <h2>neglect</h2>
+  </div>
+  <div class="label" id="right">
+    <h2>care</h2>
+  </div>
+  <div class="label" id="top">
+    <h2>trust</h2>
+  </div>
+  <div class="label" id="bottom">
+    <h2>control</h2>
+  </div>
 
-  <nav role="navigation">
-    <div class="map" id="menuToggle">
-      <input type="checkbox" id="sign"/>
-      <ul id="map">
-        <li>GIJS GARDEN</li>
-        <li>A planthouse of species of care...</li>
-
-        <li>
-          <label class="">Icons</label>
-          <input type="checkbox" class="family" checked="checked"/>
-          <div class="plants">
-
-              <a href="#handcard" style="right: 10%; bottom: 20%;" class="plant">
-                <img src="images/planthand.png"/>
-              </a>
-              <div id="handcard" class="card">
-                <a class="back" href="#"> </a>
-                <div>
-                  <a href="#" title="back" class="card-close">back</a>
-                  <img src="images/planthand.png" class="card-image"/>
-                  <h3>family: Icons</h3>
-                  <h2>Hand pot</h2>
-                  <p>Holding a plant in transit in between two places where it can live or on its way to the green bin.</p>
-                </div>
-              </div>
-
-
-              <a href="#planetcard" style="right: 20%; bottom: 5%;" class="plant">
-                <img src="images/greenhands.png"/>
-              </a>
-              <div id="planetcard" class="card">
-                <a class="back" href="#"> </a>
-                <div>
-                  <a href="#" title="back" class="card-close">back</a>
-                  <img src="images/greenhands.png" class="card-image"/>
-                  <h3>family: Icons</h3>
-                  <h2>Planet catching</h2>
-                  <p>Not sure if these hands actually hold or cherish or are just not sure why?</p>
-                </div>
-              </div>
-
-        </div>
-      </li>
-      <li>
-        <label class="">garden plans</label>
-        <input type="checkbox" class="family" checked="checked"/>
-        <div class="plants">
-
-            <a href="#zen" style="right: 5%; bottom: 5%;" class="plant">
-              <img src="images/zen.jpg"/>
-            </a>
-            <div id="zen" class="card">
-              <a class="back" href="#"> </a>
-              <div>
-                <a href="#" title="back" class="card-close">back</a>
-                <img src="images/zen.jpg" class="card-image"/>
-                <h3>family: garden plans</h3>
-                <h2>Zen Grip</h2>
-                <p>I admire the mode of care necessary to make a bonsai, but the aesthetic bothers me in its unbotheringness, its convenience, its uptightness.</p>
-              </div>
-            </div>
-
-        </div>
-      </li>
-      <li><label class="family">Men
-            <input type="checkbox">
-            <!-- <span class="checkmark"></span> -->
-          </label></li>
-        <a href="#"><li>Contact</li></a>
-      </ul>
-    </div>
+  <!-- NAVIGATION -->
+  <nav class="signs">
+    <h1 id="sitetitle">GIJS GARDEN</h1>
+    <h2>A planthouse of species of care...</h2>
+    <details class="families">
+      <summary>Families</summary>
+      <input type="checkbox" id="icon" onclick="toggle(this.id)"/>
+        <label for="icon">Icons</label><br/>
+      <input type="checkbox" id="garden" onclick="toggle(this.id)"/>
+        <label for="garden">Gardens</label><br/>
+    </details>
   </nav>
 
+<!-- LAYERS/FAMILIES -->
+  <!-- ICONS -->
+  <div class="plants" id="icons">
+
+    <a href="#handcard" style="right: 10%; bottom: 20%;" class="plant">
+      <img src="/images/planthand.png"/>
+    </a>
+    <div id="handcard" class="card">
+      <a class="back" href="#"> </a>
+      <div>
+        <a href="#" title="back" class="card-close">back</a>
+        <img src="/images/planthand.png" class="card-image"/>
+        <h3>family: Icons</h3>
+        <h2>Hand pot</h2>
+        <p>Holding a plant in transit in between two places where it can live or on its way to the green bin.</p>
+      </div>
+    </div>
 
 
-<script src="js/scripts.js"></script>
+    <a href="#planetcard" style="right: 20%; bottom: 5%;" class="plant">
+      <img src="/images/planetcatch.png"/>
+    </a>
+    <div id="planetcard" class="card">
+      <a class="back" href="#"> </a>
+      <div>
+        <a href="#" title="back" class="card-close">back</a>
+        <img src="/images/planetcatch.png" class="card-image"/>
+        <h3>family: Icons</h3>
+        <h2>Planet catching</h2>
+        <p>Not sure if these hands actually hold or cherish or are just not sure why?</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- GARDENS -->
+  <div class="plants" id="gardens">
+
+    <a href="#zen" style="right: 5vw; bottom: 5vh;" class="plant">
+      <img src="/images/zen.jpg"/>
+    </a>
+    <div id="zen" class="card">
+      <a class="back" href="#"> </a>
+      <div>
+        <a href="#" title="back" class="card-close">back</a>
+        <img src="/images/zen.jpg" class="card-image"/>
+        <h3>family: garden plans</h3>
+        <h2>Zen Grip</h2>
+        <p>I admire the mode of care necessary to make a bonsai, but the aesthetic bothers me in its unbotheringness, its convenience, its uptightness.</p>
+      </div>
+    </div>
+
+  </div>
+
+<!-- REST (CREDITS/CONTACT) -->
+ <footer>
+  <p>A project by <a href="https://www.supergijs.com">Gijs de Boer</a>, get in touch through email <a href="mailto:info@supergijs.com">email</a> </p> 
+
+ </footer> 
+
+<script src="/script.js"></script>
 </body>
 </html>
