@@ -4,8 +4,10 @@ function toggle(clicked_id) {
     var div = document.getElementById(famId);
     if (checkBox.checked == true) {
         div.style.display = 'block';
+        div.style.zIndex = '3';
     }
     else {
         div.style.display = 'none';
+        div.style.zIndex = '1';
     }
 };

@@ -8,6 +8,7 @@ html, body {
 	-webkit-font-smoothing: antialiased;
 }
 
+/* BACKGROUND */
 .ground {
 	background: darkgoldenrod;
   animation: fade 10s infinite alternate;
@@ -58,6 +59,35 @@ summary:hover,label:hover,a:hover{
   color: tomato;
 }
 
+input {
+	visibility: hidden;
+}
+
+.btn {
+	display: inline-block;
+	height: 12px;
+	width: 12px;
+	border-radius: 6px;
+	border: 1px solid white;
+	background-color: none;
+	-webkit-transition: .4s;
+	transition: .4s;
+  }
+
+input:checked + .btn {
+	background-color: yellow;
+	/* border-color: coral; */
+}
+
+label:hover > .btn {
+	background-color: coral;
+}
+
+label {
+	display: inline-block;
+	position: relative;
+}
+
 /* FOOTER */
 footer {
 	position: fixed;
@@ -80,6 +110,7 @@ footer a{
 .plants {
 	display: block;
 	/* visibility: visible; */
+	z-index: 1;
 }
 
 .plant {

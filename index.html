@@ -46,10 +46,16 @@
     <h2>A planthouse of species of care.</h2>
     <details class="families">
       <summary>Show these families</summary>
-      <input type="checkbox" id="icon" onclick="toggle(this.id)" checked/>
-        <label for="icon">Icons</label><br/>
-      <input type="checkbox" id="garden" onclick="toggle(this.id)" checked/>
-        <label for="garden">Gardens</label><br/>
+      <label for="icon">
+        <input type="checkbox" id="icon" onclick="toggle(this.id)" checked/>
+        <span class="btn"></span>
+          I. Icons
+      </label><br/>
+      <label for="garden">
+        <input type="checkbox" id="garden" onclick="toggle(this.id)" checked/>
+        <span class="btn"></span>
+        II. Gardens
+      </label><br/>
     </details>
   </nav>
 
@@ -71,7 +77,7 @@
     </div>
   </div>
 
-  <a href="#planetcard" style="left: 63vw; top: 35vh;" class="plant">
+  <a href="#planetfloatcard" style="left: 63vw; top: 35vh;" class="plant">
     <img src="/images/planetcatch.png"/>
   </a>
   <div id="planetfloatcard" class="card">
@@ -82,20 +88,6 @@
       <h3>family: Icons</h3>
       <h2>Planet catching</h2>
       <p>Not sure if these hands actually hold or cherish or are just not sure why?</p>
-    </div>
-  </div>
-
-  <a href="#soilhandscard" style="left: 80vw; top: 72vh;" class="plant">
-    <img src="/images/soilhands.png"/>
-  </a>
-  <div id="soilhandscard" class="card">
-    <a class="back" href="#"> </a>
-    <div>
-      <a href="#" title="back" class="card-close">back</a>
-      <img src="/images/soilhands.png" class="card-image"/>
-      <h3>family: Icons</h3>
-      <h2>Soil slipping</h2>
-      <p>Fingers very tight together, don't let this one slip!</p>
     </div>
   </div>
 
