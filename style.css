@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 * {
 	box-sizing: border-box;
 }
@@ -181,14 +183,23 @@ a.back {
   border-top: 50px solid white;
 }
 
-@media only screen and (max-width: 900px) {
-	/* --cardwidth: 80vw; */
-		.card > div {
-			width: 300px;
-		}
-		.card > div::after {
-			width: 200px;
-		}
+:root{
+	--cardwidth: 90vw;
+}
+
+body{
+	font-size: calc(12px + 8 * ((100vw - 300px) / (1600 - 300)));
+}
+
+@media only screen and (max-width: 800px) {
+	.card > div {
+		width: var(--cardwidth);
+		max-width: 400px;
+	}
+	.card > div::after {
+		width: calc(var(--cardwidth) - 100px);
+		max-width: 300px;
+	}
 }
 
 .card-close {
@@ -228,56 +239,58 @@ h3 {
 	letter-spacing: 0.1em;
 }
 
-p	{
-}
-
 /* THE GRID */
 .label h2 {
 	color: yellow;
 	text-align: center;
 	margin: 0px;
-	font-size: 1.7rem;
+	/* font-size: 1.7rem; */
 	/* line-height: 0; */
 }
 
 .label {
+	margin: auto;
 	display: inline-block;
-	height: 45px;
-	width: 110px;
-	padding: 5px;
+	/* height: 45px;
+	width: 110px; */
+	padding: 10px;
 	/* border: 1px solid yellow; */
 	position: fixed;
+
 }
 
 #left {
 	left:0;
 	top: 50%;
-	margin-top: -22px;
+	transform: translate(0,-50%);
 }
 #right {
 	right:0;
 	top: 50%;
-	margin-top: -22px;
+	transform: translate(0,-50%);
 }
 #top {
 	right:50%;
 	top: 0;
-	margin-right: -55px;
+	transform: translate(50%,0);
+	/* margin-right: -55px; */
 }
 #bottom {
 	right:50%;
 	bottom: 0;
-	margin-right: -55px;
+	transform: translate(50%,0);
 }
 
 #crosshair-h {
     /* width:80vw; */
-	left: 100px;
+	left: 120px;
 	right: 90px;
     height:3px;
     top:50%;
     position: fixed;
     z-index: 1 !important;
+	transform: translate(0, -50%)
+
 }
 
 #crosshair-v{
@@ -285,11 +298,22 @@ p	{
     width:3px;
     left:50%;
     position:fixed;
-    top: 40px;
-	bottom: 40px;
+    top: 50px;
+	bottom: 50px;
     z-index: 1 !important;
+	transform: translate(-50%,0)
 }
 
+@media only screen and (max-width:800px) {
+	#crosshair-h{
+		left: 80px;
+		right: 60px;
+	}
+	#crosshair-v{
+		top: 40px;
+		bottom: 40px;
+	}
+}
 .hair{
     background-color:rgba(255,255,0,0.9);
     pointer-events:none;
