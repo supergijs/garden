@@ -117,7 +117,8 @@ footer a{
 	-webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
 	filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.6));
 	position: fixed;
-	width: 100px;
+	width: 5vw;
+	min-width: 40px;
 	display: block;
 	transform: translate(-50%, -50%);
 }
@@ -129,6 +130,8 @@ footer a{
 
 .plant img{
 	width:inherit;
+	min-width: 40px;
+
 }
 
 /* THE CARDS */
@@ -176,6 +179,16 @@ a.back {
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
   border-top: 50px solid white;
+}
+
+@media only screen and (max-width: 900px) {
+	/* --cardwidth: 80vw; */
+		.card > div {
+			width: 300px;
+		}
+		.card > div::after {
+			width: 200px;
+		}
 }
 
 .card-close {
@@ -260,7 +273,7 @@ p	{
 #crosshair-h {
     /* width:80vw; */
 	left: 100px;
-	right: 100px;
+	right: 90px;
     height:3px;
     top:50%;
     position: fixed;
