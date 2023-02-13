@@ -4,7 +4,7 @@
 	box-sizing: border-box;
 }
 html, body {
-	cursor: url("images/tinyspade.png") 0 31, crosshair;
+	cursor: url("images/spades/tinyspade.png") 0 31, crosshair;
 	height: 100%;
   margin: 0;
 	-webkit-font-smoothing: antialiased;
@@ -34,9 +34,10 @@ html, body {
 }
 
 /* NAV */
-nav.signs {
+#signs {
 	position: absolute;
-	top: 0;
+	/* margin: 10px; */
+	top: 0; 
 	z-index: 1;
 	color: #EEE;
 	font-size: 1.2em;
@@ -44,19 +45,27 @@ nav.signs {
 	padding: 0.2em 0.4em;
 	min-width: 280px;
 	width: 25vw;
-	background-color: rgba(0,0,0, 0.25);
-	border: dotted white;
+	background-color: rgba(0, 0, 0, 0.35);
+	border: outset white;
+	cursor: move;
+}
+#signsheader{
 }
 
 nav h1, nav h2{
-	margin: 0;
+	margin: 0.4em 0;
 	font-weight: normal;
+	text-align: center;
 }
 
 nav h2{
 	font-size: 1.0em;
+	line-height: 1.1;
 }
 
+summary{
+	cursor: cell;
+}
 summary:hover,label:hover,a:hover{
   color: tomato;
 }
@@ -88,6 +97,9 @@ label:hover > .btn {
 label {
 	display: inline-block;
 	position: relative;
+	cursor: pointer;
+	font-size: 0.9em;
+
 }
 
 /* FOOTER */
@@ -118,6 +130,7 @@ footer a{
 .plant {
 	-webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
 	filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.6));
+	cursor: zoom-in;
 	position: fixed;
 	width: 5vw;
 	min-width: 40px;
@@ -150,6 +163,7 @@ footer a{
   opacity: 0;
   pointer-events: none;
   transition: all 0.1s;
+  font-size: 1.2em;
 }
 .card:target {
 	visibility: visible;
@@ -239,6 +253,15 @@ h3 {
 	letter-spacing: 0.1em;
 }
 
+h5 {
+	font-family: 'Times New Roman', Times, serif;
+	font-weight: 100;
+	font-size: 0.6em;
+	color: #aaa;
+	text-align: center;
+	margin-top: 5px;;
+}
+
 /* THE GRID */
 .label h2 {
 	color: yellow;
@@ -256,7 +279,6 @@ h3 {
 	padding: 10px;
 	/* border: 1px solid yellow; */
 	position: fixed;
-
 }
 
 #left {
