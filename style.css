@@ -53,6 +53,38 @@ html, body {
 #signsheader{
 }
 
+dfn{
+	text-decoration: none;
+}
+
+dfn:hover{
+	color: lightblue;
+	text-decoration: dotted;
+	cursor: help;
+}
+
+a[title] {
+	position: relative;
+	display: inline-block;
+	/* margin-top: 20px; */
+	color: white;
+	text-decoration: none;
+	font-style: italic;
+	cursor: help;
+  }
+
+a[title]:hover::after {
+	content: attr(title);
+	position: absolute;
+	/* top: -100%;
+	left: 0; */
+	margin-left: 10px;
+	text-shadow: none;
+	background: yellow;
+	color: black;
+	width:200px;
+  }
+
 nav h1, nav h2{
 	margin: 0.4em 0;
 	font-weight: normal;
@@ -95,6 +127,10 @@ label:hover > .btn {
 	background-color: coral;
 }
 
+label:hover > input:checked + .btn {
+	background-color: rgb(255, 201, 182);
+}
+
 label {
 	display: inline-block;
 	position: relative;
@@ -114,6 +150,7 @@ footer {
 	text-align: left;
 	padding: 5px;
 	line-height: 0;
+	z-index: 0;
 }
 
 footer a{
@@ -270,16 +307,67 @@ h5 {
 	margin: 0px;
 	/* font-size: 1.7rem; */
 	/* line-height: 0; */
+	cursor: help;
+}
+.label a {
+	text-decoration: none;
+}
+
+.label details > summary{
+	list-style: none;
+}
+.label details > summary::-webkit-details-marker {
+	display: none;
+  }
+.label details{
+	text-align: left;
+	color: yellow;
+	width: inherit;
+	/* position: absolute; */
 }
 
 .label {
 	margin: auto;
 	display: inline-block;
-	/* height: 45px;
-	width: 110px; */
+	/* height: 45px;*/
+	width: 110px;
 	padding: 10px;
 	/* border: 1px solid yellow; */
 	position: fixed;
+	text-shadow: black 0 0 4px;
+	z-index: 1;
+}
+.label details p{
+	position: absolute;
+	margin: 0 15px;
+	width: 200px;
+}
+
+.labeldef {
+	position: fixed;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	display: none;
+	z-index: 1000;
+}
+
+.labeldef:target{
+	display: block;
+}
+
+.labeldef div{
+	position:absolute;
+	width: 300px;
+	top: 50vh;
+	left: 50vw;
+	transform: translate(-50%,-50%);
+	padding: 1em;
+	background: black;
+	text-align: center;
+	color: yellow;
+	border: outset yellow 3px;
 }
 
 #left {
