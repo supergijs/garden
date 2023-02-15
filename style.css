@@ -11,7 +11,7 @@ html, body {
 }
 
 /* BACKGROUND */
-.ground {
+#ground {
 	background: darkgoldenrod;
   animation: fade 10s infinite alternate;
 	background-image: url("images/sunsoil.jpg");
@@ -23,6 +23,36 @@ html, body {
 	-webkit-filter: blur(8px); */
 	height: 100%;
 	width: 100%;
+}
+
+.groundless{
+	display: none;
+}
+
+.black {
+	background: rgb(12, 12, 12);
+}
+
+#clarity {
+	position: fixed;
+	top: 5px;
+	right: 5px;
+	display: block;
+	/* padding:5px; */
+	height: 25px;
+	background: none;
+	border: solid 2px white;
+	border-radius: 12px;
+	color: white;
+	text-align: center;
+	font-style: Monaco, courier, monospace;
+}
+#clarity:hover{
+	background: grey;
+}
+#clarity.on{
+	background: white;
+	color: black;
 }
 
 @keyframes fade {
@@ -50,6 +80,12 @@ html, body {
 	border: outset white;
 	cursor: move;
 }
+
+#signs.green {
+	background-color: black;
+	border: solid 3px yellow;
+}
+
 #signsheader{
 }
 
@@ -136,7 +172,7 @@ label {
 	position: relative;
 	cursor: pointer;
 	font-size: 0.9em;
-
+	text-transform: capitalize;
 }
 
 /* FOOTER */

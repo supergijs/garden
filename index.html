@@ -22,27 +22,29 @@
 
 <body>
   <!-- BACKGROUND -->
-  <div class="ground"></div>
+  <div id="ground"></div>
+  <button id="clarity" onclick="clarity()">clarity</button>
 
   <!-- GRID -->
   <div id="crosshair-h" class="hair"></div>
   <div id="crosshair-v" class="hair"></div>
   <div class="label" id="left">
-    <details>
+    <a href="#neglect"><h2>neglect</h2></a>
+    <!-- <details>
       <summary>
         <h2>neglect</h2>
       </summary>
       <p>When the technology feels like it increases the distance between human and plant.</p>
-    </details>
+    </details> -->
   </div>
   <div class="label" id="right">
-    <h2>care</h2>
+    <a href="#care"><h2>care</h2></a>
   </div>
   <div class="label" id="top">
     <a href="#trust"><h2>trust</h2></a>
   </div>
   <div class="label" id="bottom">
-    <h2>control</h2>
+    <a href="#control"><h2>control</h2></a>
   </div>
 
 <div id="trust" class="labeldef">
@@ -50,6 +52,30 @@
   <div>
     <h2>Trust</h2>
     <p>When an instance of design invites a relation with plants where plants get space to move or make mess.</p>
+  </div>
+</div>
+
+<div id="care" class="labeldef">
+  <a href="#" class="back"></a>
+  <div>
+    <h2>Care</h2>
+    <p>When design structures a relation where human and plant are involved with each other.</p>
+  </div>
+</div>
+
+<div id="neglect" class="labeldef">
+  <a href="#" class="back"></a>
+  <div>
+    <h2>Neglect</h2>
+    <p>When the technology feels like it increases the distance between human and plant.</p>
+  </div>
+</div>
+
+<div id="control" class="labeldef">
+  <a href="#" class="back"></a>
+  <div>
+    <h2>Control</h2>
+    <p>When technology gives humans more agency over how plants grow or don't grow.</p>
   </div>
 </div>
 
@@ -69,12 +95,17 @@
     <label for="garden">
       <input type="checkbox" id="garden" onclick="toggle(this.id)" checked/>
       <span class="btn"></span>
-      II. Garden Arrangements
+      II. Garden arrangements
     </label><br/>
     <label for="planthouse">
       <input type="checkbox" id="planthouse" onclick="toggle(this.id)" checked/>
       <span class="btn"></span>
-      III. The House-Plant-House
+      III. The house-plant-house
+    </label><br/>
+    <label for="natureview">
+      <input type="checkbox" id="natureview" onclick="toggle(this.id)" checked/>
+      <span class="btn"></span>
+      IV. Views of nature
     </label><br/>
   </details>
 </nav>
@@ -327,7 +358,7 @@
     <div>
       <a href="#" title="back" class="card-close">back</a>
       <img src="/images/planthouse/shire.jpg" class="card-image"/>
-      <h3>family: garden plans</h3>
+      <h3>family: house-plant-house</h3>
       <h2>house-beneath-plant</h2>
       <p>In Shire-like houses, the garden is on top of the house, or, the house slid under the carpet.</p>
     </div>
@@ -341,7 +372,7 @@
     <div>
       <a href="#" title="back" class="card-close">back</a>
       <img src="/images/planthouse/wintergarden.jpg" class="card-image"/>
-      <h3>family: garden plans</h3>
+      <h3>family: house-plant-house</h3>
       <h2>plants-between-house</h2>
       <p>The "winter garden" of Villa Tugendhat, a modernist architectural icon, the plants live inside a sort of widened double-glass window.</p>
     </div>
@@ -356,7 +387,7 @@
       <a href="#" title="back" class="card-close">back</a>
       <img src="/images/planthouse/ruinsfriedrich.jpg" class="card-image"/>
       <h5>Painting by Caspar David Friedrich</h5>
-      <h3>family: garden plans</h3>
+      <h3>family: house-plant-house</h3>
       <h2>plants-over-house</h2>
       <p>In the romantic end of it all, plants overgrow houses.</p>
     </div>
@@ -370,7 +401,7 @@
     <div>
       <a href="#" title="back" class="card-close">back</a>
       <img src="/images/planthouse/babylon.jpg" class="card-image"/>
-      <h3>family: garden plans</h3>
+      <h3>family: house-plant-house</h3>
       <h2>plants-on-house</h2>
       <p>The Babylonian vertical gardens were quite horizontal, but definitely entice a paradise lost feeling in me. Some aesthetic of harmonious living together, even if I'm not too sure if the marble could withhold the roots over time.</p>
     </div>
@@ -384,7 +415,7 @@
     <div>
       <a href="#" title="back" class="card-close">back</a>
       <img src="/images/planthouse/planthole.jpg" class="card-image"/>
-      <h3>family: garden plans</h3>
+      <h3>family: house-plant-house</h3>
       <h2>house-squeezed-plant</h2>
       <p>The patio of a Roman villa, with it's minimal open roof, is the last stage between garden and house-plants.</p>
     </div>
@@ -398,7 +429,7 @@
     <div>
       <a href="#" title="back" class="card-close">back</a>
       <img src="/images/planthouse/romanvilla.jpg" class="card-image"/>
-      <h3>family: garden plans</h3>
+      <h3>family: house-plant-house</h3>
       <h2>house-around-plant</h2>
       <p>The Roman Villa hugged the plants with its walls.</p>
     </div>
@@ -412,7 +443,7 @@
     <div>
       <a href="#" title="back" class="card-close">back</a>
       <img src="/images/planthouse/plantserre.jpg" class="card-image"/>
-      <h3>family: garden plans</h3>
+      <h3>family: house-plant-house</h3>
       <h2>plant-besides-house</h2>
       <p>In a serre, somewhere between an orangerie and room, plants could make a bit more of a mess.</p>
     </div>
@@ -426,7 +457,7 @@
     <div>
       <a href="#" title="back" class="card-close">back</a>
       <img src="/images/planthouse/emptyloft.jpg" class="card-image"/>
-      <h3>family: garden plans</h3>
+      <h3>family: house-plant-house</h3>
       <h2>house-without-plant</h2>
       <p>An empty loft feels extra empty after we've moved from pre-Victorian houses without plants.</p>
     </div>
@@ -440,7 +471,7 @@
     <div>
       <a href="#" title="back" class="card-close">back</a>
       <img src="/images/planthouse/plantwindow.jpg" class="card-image"/>
-      <h3>family: garden plans</h3>
+      <h3>family: house-plant-house</h3>
       <h2>plants-from-house</h2>
       <p>Victorian trends made plants decorative. Who needs curtains?</p>
     </div>
@@ -454,7 +485,7 @@
     <div>
       <a href="#" title="back" class="card-close">back</a>
       <img src="/images/planthouse/plantloft.jpg" class="card-image"/>
-      <h3>family: garden plans</h3>
+      <h3>family: house-plant-house</h3>
       <h2>plant-in-house</h2>
       <p>What do you see in the image? Captive jungle-native Monsteras?</p>
     </div>
@@ -468,12 +499,87 @@
     <div>
       <a href="#" title="back" class="card-close">back</a>
       <img src="/images/planthouse/frontgarden.jpg" class="card-image"/>
-      <h3>family: garden plans</h3>
+      <h3>family: house-plant-house</h3>
       <h2>plant-before-house</h2>
       <p>Very close but just before, sometimes like a display, sometimes like a mini paradise, sometimes like a wall.</p>
     </div>
   </div>
 
+
+</div>
+
+<!-- NATUREVIEWS -->
+<div class="plants" id="natureviews">
+
+  <a href="#aesthetic" style="left: 55vw; top: 77vh;" class="plant">
+    <img src="/images/natureviews/tulip.jpg"/>
+  </a>
+  <div id="aesthetic" class="card">
+    <a class="back" href="#"> </a>
+    <div>
+      <a href="#" title="back" class="card-close">back</a>
+      <img src="/images/natureviews/tulips.jpg" class="card-image"/>
+      <h3>family: views of nature</h3>
+      <h2>Beautiful Nature</h2>
+      <p>The tulip is the product of an idea of nature as a source of beauty. The Tulip bulb crash in the seventeenth century was a reminder that beauty does not always last.</p>
+    </div>
+  </div>
+
+  <a href="#rhizome" style="left: 75vw; top: 27vh;" class="plant">
+    <img src="/images/natureviews/rhizome.jpg"/>
+  </a>
+  <div id="rhizome" class="card">
+    <a class="back" href="#"> </a>
+    <div>
+      <a href="#" title="back" class="card-close">back</a>
+      <img src="/images/natureviews/eywa.jpg" class="card-image"/>
+      <h3>family: views of nature</h3>
+      <h2>Entangled Nature</h2>
+      <p>We're always already nature. Everything is connected, like the mycelium 'internet of the forest' and all the critical text that use the metaphor of this 'rhizome' to explain that everything is connected.</p>
+    </div>
+  </div>
+
+  <a href="#functional" style="left: 17vw; top: 87vh;" class="plant">
+    <img src="/images/natureviews/agriculture.jpg"/>
+  </a>
+  <div id="functional" class="card">
+    <a class="back" href="#"> </a>
+    <div>
+      <a href="#" title="back" class="card-close">back</a>
+      <img src="/images/natureviews/agriculture.jpg" class="card-image"/>
+      <h3>family: views of nature</h3>
+      <h2>Functional Nature</h2>
+      <p>In a functional idea of nature, all non-human organisms are there primarily as a potential resource. (Still running through a cornfield feels romantic.)</p>
+    </div>
+  </div>
+
+  <a href="#wilderness" style="left: 23vw; top: 12vh;" class="plant">
+    <img src="/images/natureviews/wanderer.jpg"/>
+  </a>
+  <div id="wilderness" class="card">
+    <a class="back" href="#"> </a>
+    <div>
+      <a href="#" title="back" class="card-close">back</a>
+      <img src="/images/natureviews/wilderness.jpg" class="card-image"/>
+      <h3>family: views of nature</h3>
+      <h2>Wild Nature</h2>
+      <p>Nature as wild and untamed, in opposition to human artifice, and most importantly, way bigger and sublime. This view feels like it deifies nature but negates humans, as if we're not a part of it, only through being blown away by it.</p>
+    </div>
+  </div>
+
+  <a href="#culture" style="left: 63vw; top: 52vh;" class="plant">
+    <img src="/images/natureviews/culturelandscape.jpg"/>
+  </a>
+  <div id="culture" class="card">
+    <a class="back" href="#"> </a>
+    <div>
+      <a href="#" title="back" class="card-close">back</a>
+      <img src="/images/natureviews/culturelandscape.jpg" class="card-image"/>
+      <h3>family: views of nature</h3>
+      <h2>Cultured Nature</h2>
+      <p>Growing up in the Netherlands may have made me default to a view of nature as something made, or at least 'kept'. The human in the role of the steward, taking care of nature as of a garden the size of the planet. I'm not sure again, it feels hierarchical, too comfortable to assume the position of the one giving rather than needing care.</p>
+    </div>
+  </div>
 
 </div>
 

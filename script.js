@@ -39,6 +39,34 @@ function dragElement(elmnt) {
   }
 }
 
+function clarity() {
+    var element = document.body;
+    element.classList.toggle("black");
+    var ground = document.getElementById('ground');
+    ground.classList.toggle("groundless");
+    var nav = document.getElementById('signs');
+    nav.classList.toggle("green");
+    var btn = document.getElementById('clarity');
+    btn.classList.toggle("on");
+}
+
+window.onload = function() {
+    var box = document.getElementById('signs');  
+    box.addEventListener('touchmove', function(e) {
+      // grab the location of touch
+      var touchLocation = e.targetTouches[0];
+      // assign box new coordinates based on the touch.
+      box.style.left = touchLocation.pageX + 'px';
+      box.style.top = touchLocation.pageY + 'py';
+    })
+    box.addEventListener('touchend', function(e) {
+      // current box position.
+      var x = parseInt(box.style.left);
+      var y = parseInt(box.style.top);
+    })
+    
+  }
+
 function toggle(clicked_id) {
     var checkBox = document.getElementById(clicked_id); 
     var famId = new String(clicked_id+"s");
