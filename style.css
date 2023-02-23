@@ -4,7 +4,7 @@
 	box-sizing: border-box;
 }
 html, body {
-	cursor: url("images/spades/tinyspade.png") 0 31, crosshair;
+	cursor: crosshair;
 	height: 100%;
   margin: 0;
 	-webkit-font-smoothing: antialiased;
@@ -13,7 +13,7 @@ html, body {
 /* BACKGROUND */
 #ground {
 	background: darkgoldenrod;
-  animation: fade 10s infinite alternate;
+  	animation: fade 10s infinite alternate;
 	background-image: url("images/sunsoil.jpg");
 	background-repeat: repeat;
 	background-position: center;
@@ -76,7 +76,7 @@ html, body {
 	padding: 0.2em 0.4em;
 	min-width: 280px;
 	width: 25vw;
-	background-color: rgba(0, 0, 0, 0.35);
+	background-color: rgba(0, 0, 0, 0.75);
 	border: outset white;
 	cursor: move;
 }
@@ -89,6 +89,15 @@ html, body {
 #signsheader{
 }
 
+#gijsgarden div{
+	border-color: white;
+	background-color: white;
+	color: black;
+}
+#gijsgarden h1, h2, h3 {
+	font-weight: normal;
+}
+
 dfn{
 	text-decoration: none;
 }
@@ -99,11 +108,14 @@ dfn:hover{
 	cursor: help;
 }
 
+nav a{
+	color:inherit;
+}
 a[title] {
 	position: relative;
 	display: inline-block;
 	/* margin-top: 20px; */
-	color: white;
+	color: inherit;
 	text-decoration: none;
 	font-style: italic;
 	cursor: help;
@@ -128,7 +140,7 @@ nav h1, nav h2{
 }
 
 nav h2{
-	font-size: 1.0em;
+	font-size: 0.9em;
 	line-height: 1.1;
 }
 
@@ -175,24 +187,6 @@ label {
 	text-transform: capitalize;
 }
 
-/* FOOTER */
-footer {
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	width: 100vw;
-	color: grey;
-	/* background: rgba(255, 255, 255, 0.25); */
-	text-align: left;
-	padding: 5px;
-	line-height: 0;
-	z-index: 0;
-}
-
-footer a{
-	color: inherit;
-}
-
 /* THE PLANTS */
 
 .plants {
@@ -204,7 +198,7 @@ footer a{
 .plant {
 	-webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
 	filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.6));
-	cursor: zoom-in;
+	cursor: url("images/spades/tinyspade.png") 0 31, zoom-in;
 	position: fixed;
 	width: 5vw;
 	min-width: 40px;
@@ -476,4 +470,22 @@ h5 {
 	float: left;
 	margin-right: 2rem;
 	clear: left;
+}
+
+/* FOOTER */
+footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100vw;
+	color: grey;
+	/* background: rgba(255, 255, 255, 0.25); */
+	text-align: left;
+	padding: 5px;
+	line-height: 0;
+	z-index: 0;
+}
+
+footer a{
+	color: inherit;
 }
