@@ -70,13 +70,34 @@ window.onload = function() {
 function toggle(clicked_id) {
     var checkBox = document.getElementById(clicked_id); 
     var famId = new String(clicked_id+"s");
-    var div = document.getElementById(famId);
+    var clickedFam = document.getElementById(famId);
+    var plantFams = document.getElementsByClassName("plants");
+
     if (checkBox.checked == true) {
-        div.style.display = 'block';
-        div.style.zIndex = '3';
+      clickedFam.style.display = 'block';
+
+      for(var i=0, iLen=plantFams.length; i<iLen; i++) {
+        var plantFam = plantFams[i];
+        var plants = plantFam.getElementsByClassName('plant');
+
+        if (plantFam.id == famId) {
+
+          for(var i=0, iLen=plants.length; i<iLen; i++){
+            plants[i].style.zIndex = '3';
+          }; 
+         
+        }
+        else{      
+          for(var i=0, iLen=plants.length; i<iLen; i++){
+
+            plants[i].style.zIndex = '1';
+          }; 
+
+        };
+      }
     }
+    
     else {
-        div.style.display = 'none';
-        div.style.zIndex = '1';
+      clickedFam.style.display = 'none';
     }
 };

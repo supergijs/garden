@@ -6,9 +6,14 @@
 html, body {
 	cursor: crosshair;
 	height: 100%;
-  margin: 0;
+  	margin: 0;
 	-webkit-font-smoothing: antialiased;
 }
+
+body{
+	font-size: calc(12px + 6 * ((100vw - 300px) / (1600 - 300)));
+}
+
 
 /* BACKGROUND */
 #ground {
@@ -30,7 +35,7 @@ html, body {
 }
 
 .black {
-	background: rgb(12, 12, 12);
+	background: rgb(34, 25, 20);
 }
 
 #clarity {
@@ -63,13 +68,33 @@ html, body {
   100% {background-color: darkorchid;}
 }
 
+/* ABOUT */
+#gijsgarden div{
+	border-color: floralwhite;
+	background-color: floralwhite;
+	color: black;
+	/* max-height: 90vh;
+	overflow: scroll; */
+}
+#gijsgarden h1, h2, h3 {
+	font-weight: normal;
+}
+
+#gijsgarden p{
+	/* text-align: left; */
+	font-size: 1.1em;
+	padding: 0px 12px;
+	line-height: 1.4;
+	letter-spacing: 0.01em;
+}
+
 /* NAV */
 #signs {
 	position: absolute;
 	/* margin: 10px; */
 	top: 0; 
-	z-index: 1;
-	color: #EEE;
+	z-index: 10;
+	color: floralwhite;
 	font-size: 1.2em;
 	line-height: 1.5;
 	text-shadow: #000 0px 0px 5px;
@@ -77,7 +102,7 @@ html, body {
 	min-width: 280px;
 	width: 25vw;
 	background-color: rgba(0, 0, 0, 0.75);
-	border: outset white;
+	border: outset floralwhite;
 	cursor: move;
 }
 
@@ -89,29 +114,11 @@ html, body {
 #signsheader{
 }
 
-#gijsgarden div{
-	border-color: white;
-	background-color: white;
-	color: black;
-}
-#gijsgarden h1, h2, h3 {
-	font-weight: normal;
-}
-
-dfn{
-	text-decoration: none;
-}
-
-dfn:hover{
-	color: lightblue;
-	text-decoration: dotted;
-	cursor: help;
-}
-
 nav a{
 	color:inherit;
 }
-a[title] {
+
+a[name] {
 	position: relative;
 	display: inline-block;
 	/* margin-top: 20px; */
@@ -120,9 +127,12 @@ a[title] {
 	font-style: italic;
 	cursor: help;
   }
+a[name]:active{
+	/* pointer-events: none; */
+}
 
-a[title]:hover::after {
-	content: attr(title);
+a[name]:hover::after {
+	content: attr(name);
 	position: absolute;
 	/* top: -100%;
 	left: 0; */
@@ -131,6 +141,7 @@ a[title]:hover::after {
 	background: yellow;
 	color: black;
 	width:200px;
+
   }
 
 nav h1, nav h2{
@@ -144,6 +155,7 @@ nav h2{
 	line-height: 1.1;
 }
 
+/* FAMILY TOGGLES */
 summary{
 	cursor: cell;
 }
@@ -162,8 +174,8 @@ input {
 	border-radius: 6px;
 	border: 1px solid white;
 	background-color: none;
-	-webkit-transition: .4s;
-	transition: .4s;
+	/* -webkit-transition: .2s;
+	transition: .2s; */
   }
 
 input:checked + .btn {
@@ -193,6 +205,7 @@ label {
 	display: block;
 	/* visibility: visible; */
 	z-index: 1;
+	
 }
 
 .plant {
@@ -204,6 +217,7 @@ label {
 	min-width: 40px;
 	display: block;
 	transform: translate(-50%, -50%);
+	z-index: 0;
 }
 
 .plant:hover {
@@ -221,7 +235,7 @@ label {
 
 .card {
   position: fixed;
-  background-color: rgba(255, 255, 255, 0.25);
+  /* background-color: rgba(255, 255, 255, 0.25); */
   top: 0;
   right: 0;
   bottom: 0;
@@ -251,7 +265,8 @@ a.back {
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 2em;
-    background: white;
+	padding-bottom: 0;
+    background: floralwhite;
 }
 .card > div::after {
   content: "";
@@ -262,27 +277,13 @@ a.back {
   height: 0px;
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
-  border-top: 50px solid white;
+  border-top: 50px solid floralwhite;
 }
 
 :root{
 	--cardwidth: 90vw;
 }
 
-body{
-	font-size: calc(12px + 8 * ((100vw - 300px) / (1600 - 300)));
-}
-
-@media only screen and (max-width: 800px) {
-	.card > div {
-		width: var(--cardwidth);
-		max-width: 400px;
-	}
-	.card > div::after {
-		width: calc(var(--cardwidth) - 100px);
-		max-width: 300px;
-	}
-}
 
 .card-close {
   color: #aaa;
@@ -338,22 +339,11 @@ h5 {
 	/* font-size: 1.7rem; */
 	/* line-height: 0; */
 	cursor: help;
+	/* text-transform: capitalize; */
+	font-weight: bold;
 }
 .label a {
 	text-decoration: none;
-}
-
-.label details > summary{
-	list-style: none;
-}
-.label details > summary::-webkit-details-marker {
-	display: none;
-  }
-.label details{
-	text-align: left;
-	color: yellow;
-	width: inherit;
-	/* position: absolute; */
 }
 
 .label {
@@ -366,11 +356,6 @@ h5 {
 	position: fixed;
 	text-shadow: black 0 0 4px;
 	z-index: 1;
-}
-.label details p{
-	position: absolute;
-	margin: 0 15px;
-	width: 200px;
 }
 
 .labeldef {
@@ -389,7 +374,7 @@ h5 {
 
 .labeldef div{
 	position:absolute;
-	width: 300px;
+	width: 400px;
 	top: 50vh;
 	left: 50vw;
 	transform: translate(-50%,-50%);
@@ -426,22 +411,22 @@ h5 {
     /* width:80vw; */
 	left: 120px;
 	right: 90px;
-    height:3px;
+    height:1px;
     top:50%;
     position: fixed;
-    z-index: 1 !important;
+    /* z-index: 1 !important; */
 	transform: translate(0, -50%)
 
 }
 
 #crosshair-v{
     /* height:84vh; */
-    width:3px;
+    width:1px;
     left:50%;
     position:fixed;
     top: 50px;
 	bottom: 50px;
-    z-index: 1 !important;
+    /* z-index: 1 !important; */
 	transform: translate(-50%,0)
 }
 
@@ -477,15 +462,34 @@ footer {
 	position: fixed;
 	bottom: 0;
 	left: 0;
-	width: 100vw;
+	/* width: 100vw; */
 	color: grey;
 	/* background: rgba(255, 255, 255, 0.25); */
 	text-align: left;
-	padding: 5px;
+	padding-left: 5px;
 	line-height: 0;
 	z-index: 0;
 }
 
 footer a{
 	color: inherit;
+}
+
+@media only screen and (max-width: 800px) {
+	.card > div {
+		width: var(--cardwidth);
+		max-width: 400px;
+	}
+	.card > div::after {
+		width: calc(var(--cardwidth) - 100px);
+		max-width: 300px;
+	}
+	#crosshair-h{
+		left: 90px;
+		right: 70px;
+	}
+	.labeldef div{
+		width: calc(var(--cardwidth) - 20px);
+		max-width: 300px;
+	}
 }
