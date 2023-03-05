@@ -87,25 +87,25 @@
     Here I gather examples of human-plant relations, looking for ways of caring that don't rely on control. <a href="#gijsgarden">Read more</a>.
    </h2>
   </div>
-  <details class="families">
+  <details id="toggles" class="families">
     <summary>Toggle Families</summary>
     <label for="icon">
-      <input type="checkbox" id="icon" onclick="toggle(this.id)" checked/>
+      <input type="checkbox" id="icon" checked/>
       <span class="btn"></span>
         I. Giving, holding, taking
     </label><br/>
     <label for="garden">
-      <input type="checkbox" id="garden" onclick="toggle(this.id)" checked/>
+      <input type="checkbox" id="garden" checked/>
       <span class="btn"></span>
       II. Garden arrangements
     </label><br/>
     <label for="planthouse">
-      <input type="checkbox" id="planthouse" onclick="toggle(this.id)" checked/>
+      <input type="checkbox" id="planthouse" checked/>
       <span class="btn"></span>
       III. The house-plant-house
     </label><br/>
     <label for="natureview">
-      <input type="checkbox" id="natureview" onclick="toggle(this.id)" checked/>
+      <input type="checkbox" id="natureview" checked/>
       <span class="btn"></span>
       IV. Views of nature
     </label><br/>
@@ -301,7 +301,7 @@
     </div>
   </div>
 
-  <a href="#laby" style="left: 65vw; top: 97vh;" class="plant">
+  <a href="#laby" style="" class="plant">
     <img src="/images/gardens/dutchlaby.jpg"/>
   </a>
   <div id="laby" class="card">
@@ -314,6 +314,12 @@
       <p>In this Dutch labyrinth it's harder to find wilderness than the exit.</p>
       <p>Plants have a functional role here, and care is reduced to maintaining a homogenous hedge that you can't see through.</p>
       <p>Control is key. The disorientation only works when there are no contingencies to discover.</p>
+      <label>care</label>
+      <input type="range" name="care" value="65">
+      <br>
+      <label>control</label>
+      <input type="range" name="control" value="97">
+      <!-- <output></output> -->
     </div>
   </div>
 

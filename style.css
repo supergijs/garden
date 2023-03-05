@@ -226,6 +226,12 @@ label {
 	filter: drop-shadow(2px 2px 5px yellow);
 }
 
+.highlight {
+	-webkit-filter: drop-shadow(2px 2px 5px yellow);
+	filter: drop-shadow(2px 2px 5px yellow);
+	z-index: 4;
+}
+
 .plant img{
 	width:inherit;
 	min-width: 40px;
@@ -327,6 +333,15 @@ h5 {
 	font-size: 0.6em;
 	color: #aaa;
 	margin-top: 5px;;
+}
+
+input[type="range"]{
+	visibility: inherit;
+	display: inline-block;
+	height: 20px;
+	-webkit-appearance: none;
+	margin: 0;
+	width: 100%;
 }
 
 /* THE GRID */

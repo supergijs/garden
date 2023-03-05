@@ -38,7 +38,25 @@ function dragElement(elmnt) {
     document.onmousemove = null;
   }
 }
+// Drag with touch? Still doesn't work
+window.onload = function() {
+  var box = document.getElementById('signs');  
+  box.addEventListener('touchmove', function(e) {
+    // grab the location of touch
+    var touchLocation = e.targetTouches[0];
+    // assign box new coordinates based on the touch.
+    box.style.left = touchLocation.pageX + 'px';
+    box.style.top = touchLocation.pageY + 'py';
+  })
+  box.addEventListener('touchend', function(e) {
+    // current box position.
+    var x = parseInt(box.style.left);
+    var y = parseInt(box.style.top);
+  })
+  
+}
 
+// High contrast button;
 function clarity() {
     var element = document.body;
     element.classList.toggle("black");
@@ -50,54 +68,120 @@ function clarity() {
     btn.classList.toggle("on");
 }
 
-window.onload = function() {
-    var box = document.getElementById('signs');  
-    box.addEventListener('touchmove', function(e) {
-      // grab the location of touch
-      var touchLocation = e.targetTouches[0];
-      // assign box new coordinates based on the touch.
-      box.style.left = touchLocation.pageX + 'px';
-      box.style.top = touchLocation.pageY + 'py';
-    })
-    box.addEventListener('touchend', function(e) {
-      // current box position.
-      var x = parseInt(box.style.left);
-      var y = parseInt(box.style.top);
-    })
+// MOVE PLANT WITH SLIDERS
+
+  // link card to plant
+
+  // cardSliders.addEventListener('change', e =>)
+  var plants = document.getElementsByClassName("plant");
+
+  for(plant of plants){
+    var card = plant.nextElementSibling;
+    var careSlider = card.querySelector("input[name=care]");
+    var controlSlider = card.querySelector("input[name=control]");
+
+    if (careSlider && careSlider.value){
+      var careValue = careSlider.value;
+      plant.style.left = careValue + "vw";
+
+      careSlider.addEventListener('input', e => {
+        var careValue = e.target.value;    
+        var movePlant = e.target.parentElement.parentElement.previousElementSibling;
+        movePlant.style.left = careValue + "vw";
+      });    
+
+    }
+    if (controlSlider && controlSlider.value){
+      var controlValue = controlSlider.value;
+      plant.style.top = controlValue + "vh";
+
+      controlSlider.addEventListener('input', e => {
+        var controlValue = e.target.value;    
+        var movePlant = e.target.parentElement.parentElement.previousElementSibling;
+        movePlant.style.top = controlValue + "vh";
+      });    
+
+    }
+
+    // var controlValue = controlSlider.value;
+
+    // careSlider.addEventListener('input', e => {
+    //     var careLevel = e.target.value;
+    //     // console.log(careLevel);
+
+    //     // plant.style.left = careLevel;
+    //   });    
+
+    // for(slider of cardSliders){
+
+    // }
+    // var care = cardSliders[];
+    // console.log(care);
+
+    // cardSliders[0].addEventListener('change', e => {
+    //   // console.log(cardSliders[0]);
+
+    //   var careLevel = e.target.value;
+      
+    //   plant.style.left = careLevel;
+    // });    
+
+  }    
+
+
+  // style plant
+
+// FAMILY HIGHLIGHT & TOGGLE
+var famToggles = document.getElementById("toggles");
+var toggles = famToggles.getElementsByTagName("label"); 
+var families = document.getElementsByClassName("plants");
+
+for(toggle of toggles) {
+
+  toggle.addEventListener('mouseover', e => {
+    var toggleId = e.target.children[0].id;
+    var focusFam = document.getElementById(toggleId + 's');
+    var focusPlants = focusFam.getElementsByClassName('plant');
     
-  }
+    for(focusPlant of focusPlants) {
+      focusPlant.classList.add("highlight");
+    }
+  });
+  
+  toggle.addEventListener('mouseout', e => {
+    var toggleId = e.target.children[0].id;
+    var focusFam = document.getElementById(toggleId + 's');
+    var focusPlants = focusFam.getElementsByClassName('plant');
 
-function toggle(clicked_id) {
-    var checkBox = document.getElementById(clicked_id); 
-    var famId = new String(clicked_id+"s");
-    var clickedFam = document.getElementById(famId);
-    var plantFams = document.getElementsByClassName("plants");
+    for(focusPlant of focusPlants) {
+      focusPlant.classList.remove("highlight");
+    }
+  });
 
-    if (checkBox.checked == true) {
+  var checkBox = toggle.children[0];
+  checkBox.addEventListener('change', (e) => {
+    var checkId = e.target.id;
+    var clickedFam = document.getElementById(checkId + 's');
+
+    if (e.target.checked == true) {
       clickedFam.style.display = 'block';
 
-      for(var i=0, iLen=plantFams.length; i<iLen; i++) {
-        var plantFam = plantFams[i];
-        var plants = plantFam.getElementsByClassName('plant');
-
-        if (plantFam.id == famId) {
-
-          for(var i=0, iLen=plants.length; i<iLen; i++){
-            plants[i].style.zIndex = '3';
-          }; 
-         
+      for(family of families){
+        var plants = family.getElementsByClassName('plant');
+        if(family == clickedFam){
+          for(plant of plants){
+            plant.style.zIndex = '3';
+          }
         }
-        else{      
-          for(var i=0, iLen=plants.length; i<iLen; i++){
-
-            plants[i].style.zIndex = '1';
-          }; 
-
-        };
+        else{
+          for(plant of plants){
+            plant.style.zIndex = '1';
+          }
+        }
       }
     }
-    
-    else {
+    else{
       clickedFam.style.display = 'none';
-    }
-};
+    };
+  });
+}
