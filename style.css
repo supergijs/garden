@@ -219,6 +219,7 @@ label {
 	display: block;
 	transform: translate(-50%, -50%);
 	z-index: 0;
+	transition: 0.1s;
 }
 
 .plant:hover {
