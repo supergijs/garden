@@ -80,35 +80,35 @@
 </div>
 
 <!-- NAVIGATION -->
-<nav id="signs">
+<nav id="signs" class="dragable">
   <div id="signsheader">
   <h1 id="sitetitle">The Garden of Gijs</h1>
   <h2>
     Here I gather examples of human-plant relations, looking for ways of caring that don't rely on control. <a href="#gijsgarden">Read more</a>.
    </h2>
   </div>
-  <details id="toggles" class="families">
+  <details id="toggles" class="families" open>
     <summary>Toggle Families</summary>
     <label for="icon">
       <input type="checkbox" id="icon" checked/>
       <span class="btn"></span>
         I. Giving, holding, taking
-    </label><br/>
+    </label> <a class="faminfo" href="#iconinfo">(i)</a><br/>
     <label for="garden">
       <input type="checkbox" id="garden" checked/>
       <span class="btn"></span>
       II. Garden arrangements
-    </label><br/>
+    </label> <a class="faminfo" href="#gardeninfo">(i)</a><br/>
     <label for="planthouse">
       <input type="checkbox" id="planthouse" checked/>
       <span class="btn"></span>
       III. The house-plant-house
-    </label><br/>
+    </label> <a class="faminfo" href="#houseinfo">(i)</a><br/>
     <label for="natureview">
       <input type="checkbox" id="natureview" checked/>
       <span class="btn"></span>
       IV. Views of nature
-    </label><br/>
+    </label> <a class="faminfo" href="#natureinfo">(i)</a><br/>
   </details>
 </nav>
 
@@ -266,6 +266,18 @@
 
 </div>
 
+<div id="iconinfo" class="labeldef">
+  <a href="#" class="back"></a>
+  <div>
+    <h3>family: graphic design, logos</h3>
+    <h2>I. Giving, holding, taking</h2>
+    <p>A collection of icons and logos that show a certain connection between humans and plants.</p>
+    <p>I think that many of them are meant to communicate a caring relationship, although there are also icons that rather seem to communicate distance or powerlessness, at least to me.</p>
+    <p>Then there </p>
+
+  </div>
+</div>
+
 <!-- GARDENS -->
 <div class="plants" id="gardens">
 
@@ -412,7 +424,7 @@
 <!-- PLANTHOUSE -->
 <div class="plants" id="planthouses">
 
-  <a href="#shire" style="left: 55vw; top: 15vh;" class="plant">
+  <a href="#shire" style="left: 47vw; top: 22vh;" class="plant">
     <img src="/images/planthouse/prefabshire.jpg"/>
   </a>
   <div id="shire" class="card">
@@ -421,12 +433,14 @@
       <a href="#" class="card-close">X</a>
       <img src="/images/planthouse/shire.jpg" class="card-image"/>
       <h3>family: house-plant-house</h3>
-      <h2>house-beneath-plant</h2>
-      <p>In Shire-like houses, the garden is on top of the house, or, the house slid under the carpet.</p>
+      <h2>house-beneath-plants</h2>
+      <p>In Shire-like houses, the garden is on top of the house, the house slid under the carpet.</p>
+      <p>It's quite a humble position, being a pedastal and nurturing ground, an overgrown plant pot. It will probably also feel safe, mole-like. Letting the plants do their thing.</p>
+      <p>At the same time, you can't really see the garden from the window anymore. Still engagement has to be up to a level because the humans living there are codependent on the plants to have a roof over their head.</p>
     </div>
   </div>
 
-  <a href="#wintergarden" style="left: 25vw; top: 75vh;" class="plant">
+  <a href="#wintergarden" style="left: 19vw; top: 75vh;" class="plant">
     <img src="/images/planthouse/plantwall.jpg"/>
   </a>
   <div id="wintergarden" class="card">
@@ -436,11 +450,13 @@
       <img src="/images/planthouse/wintergarden.jpg" class="card-image"/>
       <h3>family: house-plant-house</h3>
       <h2>plants-between-house</h2>
-      <p>The "winter garden" of Villa Tugendhat, a modernist architectural icon, the plants live inside a sort of widened double-glass window.</p>
+      <p>In the "winter garden" of Villa Tugendhat, a modernist architectural icon, the plants live inside a sort of widened double-glass window.</p>
+      <p>It looks pretty, but behind the glass it feels a bit like a television alive. The plants are neatly kept off the spotless floors, and from human skin. I wonder if you can smell them.</p>
+      <p>It looks relatively wild, compared to a usual house plant setup. Still, I don't fully trust it. Its perceived wilderness is probably enhanced by being framed in a meticulously ordered environment. It's contained.</p>
     </div>
   </div>
 
-  <a href="#ruins" style="left: 15vw; top: 10vh;" class="plant">
+  <a href="#ruins" style="left: 15vw; top: 8vh;" class="plant">
     <img src="/images/planthouse/ruinsfriedrich.jpg"/>
   </a>
   <div id="ruins" class="card">
@@ -451,7 +467,9 @@
       <h5>Painting by Caspar David Friedrich</h5>
       <h3>family: house-plant-house</h3>
       <h2>plants-over-house</h2>
-      <p>In the romantic end of it all, plants overgrow houses.</p>
+      <p>In the romantic end of it all, plants grow over houses until it's hard to say where rock ends and brick begins.</p>
+      <p>There's still a llittle house in the painting, which reminds me of a Tarkovsky shot of the wooden house in cathedral ruins in Nostalghia. Like a phoenix, or a new sprout, it both emphasises the age and the size of the elder.</p>
+      <p>The house was not really cared for, nor were the plants. But they do grow freely.</p>
     </div>
   </div>
 
@@ -465,7 +483,9 @@
       <img src="/images/planthouse/babylon.jpg" class="card-image"/>
       <h3>family: house-plant-house</h3>
       <h2>plants-on-house</h2>
-      <p>The Babylonian vertical gardens were quite horizontal, but definitely entice a paradise lost feeling in me. Some aesthetic of harmonious living together, even if I'm not too sure if the marble could withhold the roots over time.</p>
+      <p>The Babylonian vertical gardens were quite horizontal for todays standards, but definitely entice a paradise lost feeling in me. Some aesthetic of harmonious living together, even if I'm not too sure if the marble could withhold the roots over time.</p>
+      <p>Unlike the Hobbit houses, here you regard and wade through the greenery when going about your daily life (I imagine). And unlike today's balconies, these provided the space to grow to romantic dimensions.</p>
+      <p>Is it the temporal distance that allows my nostalgia to not associate it with contemporary green architecture?</p>
     </div>
   </div>
 
@@ -483,7 +503,7 @@
     </div>
   </div>
 
-  <a href="#househug" style="left: 45vw; top: 65vh;" class="plant">
+  <a href="#househug" style="left: 58vw; top: 65vh;" class="plant">
     <img src="/images/planthouse/romanvilla.jpg"/>
   </a>
   <div id="househug" class="card">
@@ -493,11 +513,13 @@
       <img src="/images/planthouse/romanvilla.jpg" class="card-image"/>
       <h3>family: house-plant-house</h3>
       <h2>house-around-plant</h2>
-      <p>The Roman Villa hugged the plants with its walls.</p>
+      <p>The Roman Villa hugs the plants with its walls. How care balances between a cover and a squeeze.</p>
+      <p>I see a middle stage in the progression towards full enclosure. There is still open air and plants are still the tallest here.</p>
+      <p>There is care, even without distraction of the views of others, just your own. Still there are clear constraints to the level of wilderniss.</p>
     </div>
   </div>
 
-  <a href="#serre" style="left: 35vw; top: 45vh;" class="plant">
+  <a href="#serre" style="left: 67vw; top: 432vh;" class="plant">
     <img src="/images/planthouse/plantserre.jpg"/>
   </a>
   <div id="serre" class="card">
@@ -507,11 +529,13 @@
       <img src="/images/planthouse/plantserre.jpg" class="card-image"/>
       <h3>family: house-plant-house</h3>
       <h2>plant-besides-house</h2>
-      <p>In a serre, somewhere between an orangerie and room, plants could make a bit more of a mess.</p>
+      <p>In a serre, somewhere between an orangerie and room, plants could make a bit of a mess.</p>
+      <p>Rather than the Tugendhil double glass slice of plants, humans have a place (and a seat) in the serre. The glass ceiling grants both kinds of organisms the pleasure of sunlight, while the tiled floor welcomes them both to relax.</p>
+      <p>I feel we're close here. There's codependency, a micro ecos. I feel warned about how my inner nostalgia may try to distance this from Biosphere 2. There is though. The Serre does not have autonomous pretensions, it's next to a house!</p>
     </div>
   </div>
 
-  <a href="#preplants" style="left: 5vw; top: 85vh;" class="plant">
+  <a href="#preplants" style="left: 12vw; top: 98vh;" class="plant">
     <img src="/images/planthouse/preplants.jpg"/>
   </a>
   <div id="preplants" class="card">
@@ -521,11 +545,13 @@
       <img src="/images/planthouse/emptyloft.jpg" class="card-image"/>
       <h3>family: house-plant-house</h3>
       <h2>house-without-plant</h2>
-      <p>An empty loft feels extra empty after we've moved from pre-Victorian houses without plants.</p>
+      <p>An empty loft feels extra empty after we moved on from pre-Victorian houses without plants. Some plants would compensate the negative emptiness.</p>
+      <p>That may be a general rule, because this space – especially in this place – feels very lonely. I think this loneliness is also luring, but not as much as with a few plants.</p>
+      <p>Empty as this is as clean as a Tugendhill house in a Tati film. Perhaps it also feels ready to put a desk in because of the absence of greenery. It must have been kept well to ward of molds and lichens attracted by the moist of a building left to its own. Care as a silent killer.</p>
     </div>
   </div>
 
-  <a href="#plantwindow" style="left: 27vw; top: 55vh;" class="plant">
+  <a href="#plantwindow" style="left: 37vw; top: 55vh;" class="plant">
     <img src="/images/planthouse/plantwindow.jpg"/>
   </a>
   <div id="plantwindow" class="card">
@@ -534,12 +560,14 @@
       <a href="#" class="card-close">X</a>
       <img src="/images/planthouse/plantwindow.jpg" class="card-image"/>
       <h3>family: house-plant-house</h3>
-      <h2>plants-from-house</h2>
-      <p>Victorian trends made plants decorative. Who needs curtains?</p>
+      <h2>plants-colouring-house</h2>
+      <p>Victorian trends made plants decorative. Who needs curtains when plants can fill the space left by the walls?</p>
+      <p>Unlike curtains, these plants are not to look through only, even though they also frame the view.They sit and hang waterable, on arm-length distance.</p>
+      <p>Within bounds, within arrangements, within there frame, there's space to hang and tangle. It's a staged play but a play indeed.</p>
     </div>
   </div>
 
-  <a href="#plantloft" style="left: 55vw; top: 69vh;" class="plant">
+  <a href="#plantloft" style="left: 63vw; top: 74vh;" class="plant">
     <img src="/images/planthouse/monstera.png"/>
   </a>
   <div id="plantloft" class="card">
@@ -549,11 +577,13 @@
       <img src="/images/planthouse/plantloft.jpg" class="card-image"/>
       <h3>family: house-plant-house</h3>
       <h2>plant-in-house</h2>
-      <p>What do you see in the image? Captive jungle-native Monsteras?</p>
+      <p>What do you see in the image? Not much? Jungle-native Monstera Deliciosas held captive?</p>
+      <p>To me, the items in the room have become so generic that they start to meld with the category of room, to the extent that it still feels quite empty. Ready to be rented out empty.</p>
+      <p>There's something with the lush shapes of the plants contrasting, emphasising the clean lines of the new floor and old windows. Still, this relative wilderness does not know yellow. The care was silent and strict.</p>
     </div>
   </div>
 
-  <a href="#frontgarden" style="left: 35vw; top: 26vh;" class="plant">
+  <a href="#frontgarden" style="left: 72vw; top: 42vh;" class="plant">
     <img src="/images/planthouse/frontgarden.jpg"/>
   </a>
   <div id="frontgarden" class="card">
@@ -563,7 +593,9 @@
       <img src="/images/planthouse/frontgarden.jpg" class="card-image"/>
       <h3>family: house-plant-house</h3>
       <h2>plant-before-house</h2>
-      <p>Very close but just before, sometimes like a display, sometimes like a mini paradise, sometimes like a wall.</p>
+      <p>Very close but separate. A green buffer just planted just before. Sometimes like a display, sometimes like a mini paradise, sometimes like a wall.</p>
+      <p>Any care practiced at the front garden is infused with biopower's self-surveillance. What will the neighbours think? And, importantly, what will I allow the neighbours to see, both in front of the window and behind?</p>
+      <p>I want one. I'll have to deal with these incentives to control it. But I'll gladly take up the care.</p>
     </div>
   </div>
 
