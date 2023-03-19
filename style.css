@@ -35,7 +35,15 @@ body{
 }
 
 .black {
-	background: rgb(34, 25, 20);
+	background: rgb(247, 231, 223);
+}
+.black .hair{
+	background-color: darkgray;
+}
+.black .label h2{
+	color: black;
+	font-weight: normal;
+	text-shadow: none;
 }
 
 #clarity {
@@ -50,13 +58,14 @@ body{
 	border-radius: 12px;
 	color: white;
 	text-align: center;
-	font-style: Monaco, courier, monospace;
+	font-family: Monaco, courier, monospace;
 }
-#clarity:hover{
+#clarity:hover, #clarity.on:hover{
 	background: grey;
 }
 #clarity.on{
-	background: white;
+	background: inherit;
+	border: solid 1px black;
 	color: black;
 }
 
@@ -98,7 +107,7 @@ body{
 	font-size: 1.2em;
 	line-height: 1.5;
 	text-shadow: #000 0px 0px 5px;
-	padding: 0.2em 0.4em;
+	padding: 0.4em 0.7em;
 	min-width: 280px;
 	width: 25vw;
 	background-color: rgba(0, 0, 0, 0.75);
@@ -107,8 +116,9 @@ body{
 }
 
 #signs.green {
-	background-color: black;
-	border: solid 3px yellow;
+	background-color:rgb(42, 69, 28);
+	/* text-shadow: none; */
+	/* border: solid 3px yellow; */
 }
 
 #signsheader{
@@ -198,6 +208,12 @@ label {
 	cursor: pointer;
 	font-size: 0.9em;
 	text-transform: capitalize;
+}
+
+nav label + a {
+	font-family: Monaco, Menlo, 'Courier New', Courier, monospace;
+	font-size: 0.7em;
+	text-decoration: none;
 }
 
 /* THE PLANTS */
@@ -475,7 +491,7 @@ input[type="range"]{
 footer {
 	position: fixed;
 	bottom: 0;
-	left: 0;
+	right: 0;
 	/* width: 100vw; */
 	color: grey;
 	/* background: rgba(255, 255, 255, 0.25); */
