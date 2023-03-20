@@ -156,11 +156,11 @@ body{
 	left: 10px;
 	z-index: 10;
 	color: black;
-	font-size: 1.2em;
+	font-size: 1.0em;
 	line-height: 1.5;
 	padding: 0.6em 0.8em;
 	min-width: 280px;
-	width: 28vw;
+	width: 23vw;
 	background-color: rgb(166, 187, 161);
 	border: outset rgb(166, 187, 161);
 	cursor: move;
@@ -273,6 +273,9 @@ nav label + a {
 	max-height: 100vh;
 	overflow: scroll;
 	border: none;
+	min-width: 400px;
+	width: 50vw;
+	max-width: 500px;
 }
 
 .faminfo h1, h2, h3 {
