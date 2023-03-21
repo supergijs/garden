@@ -2,11 +2,12 @@
 
 * {
 	box-sizing: border-box;
-	--bg-color:rgb(42, 59, 42);
-	--text-color:floralwhite;
+	/* --bg-color:rgb(42, 59, 42); */
+	--bg-color:rgb(174, 181, 168);
+	--menucolor: floralwhite;
+	--text-color: rgb(28, 36, 28);
 }
 html, body {
-	cursor: crosshair;
 	height: 100%;
   	margin: 0;
 	-webkit-font-smoothing: antialiased;
@@ -19,13 +20,62 @@ body{
 
 /* BACKGROUND */
 #ground {
+	cursor: crosshair;
 	background: var(--bg-color);
 	color: #EEE;
-	height: 100%;
-	width: 100%;
+	position: absolute;
+	right: 0;
+	height: 100vh;
+	width: 95vw;
+	overflow: hidden;
 }
 
 /* GRID */
+
+.hair{
+    background-color: floralwhite;
+    pointer-events:none;
+	position: absolute;
+}
+
+#crosshair-h {
+	left: 120px;
+	right: 90px;
+    height:1px;
+    top:50%;
+	transform: translate(0, -50%)
+}
+
+#crosshair-v{
+    width:1px;
+    left:50%;
+    top: 50px;
+	bottom: 50px;
+	transform: translate(-50%,0)
+}
+
+@media only screen and (max-width:800px) {
+	#crosshair-h{
+		left: 80px;
+		right: 60px;
+	}
+	#crosshair-v{
+		top: 40px;
+		bottom: 40px;
+	}
+}
+
+/* LABELS */
+
+.label {
+	position: absolute;
+	margin: auto;
+	display: inline-block;
+	width: 110px;
+	padding: 10px;
+	/* text-shadow: black 0 0 10px; */
+	z-index: 4;
+}
 
 .label h2 {
 	color: floralwhite;
@@ -36,15 +86,8 @@ body{
 .label a {
 	text-decoration: none;
 }
-
-.label {
-	margin: auto;
-	display: inline-block;
-	width: 110px;
-	padding: 10px;
-	position: fixed;
-	text-shadow: black 0 0 10px;
-	z-index: 4;
+.label h2:hover{
+	color: coral;
 }
 
 #left {
@@ -68,45 +111,10 @@ body{
 	transform: translate(50%,0);
 }
 
-#crosshair-h {
-	left: 120px;
-	right: 90px;
-    height:1px;
-    top:50%;
-    position: fixed;
-    /* z-index: 1 !important; */
-	transform: translate(0, -50%)
-
-}
-
-#crosshair-v{
-    /* height:84vh; */
-    width:1px;
-    left:50%;
-    position:fixed;
-    top: 50px;
-	bottom: 50px;
-    /* z-index: 1 !important; */
-	transform: translate(-50%,0)
-}
-
-@media only screen and (max-width:800px) {
-	#crosshair-h{
-		left: 80px;
-		right: 60px;
-	}
-	#crosshair-v{
-		top: 40px;
-		bottom: 40px;
-	}
-}
-.hair{
-    background-color: floralwhite;
-    pointer-events:none;
-}
+/* LABEL DEFINITIONS */
 
 .labeldef {
-	position: fixed;
+	position: absolute;
 	top:0;
 	bottom:0;
 	left:0;
@@ -122,8 +130,8 @@ body{
 .labeldef div{
 	position: absolute;
 	width: 300px;
-	top: 50vh;
-	left: 50vw;
+	top: 50%;
+	left: 50%;
 	transform: translate(-50%,-50%);
 	padding: 1em;
 	background: floralwhite;
@@ -139,31 +147,26 @@ body{
 	letter-spacing: 0.01em;
 }
 
-/* ABOUT */
-#gijsgarden div{
-	width: 400px;
-	/* max-height: 90vh;
-	overflow: scroll; */
-}
-#gijsgarden h1, h2, h3 {
-	font-weight: normal;
-}
-
 /* NAV */
 #signs {
-	position: absolute;
-	top: 10px; 
-	left: 10px;
+	position: fixed;
+	top: 0px; 
+	left: -200px;
+	height: 100vh;
+	width: 200px;
 	z-index: 10;
+	margin-left: 5%;
 	color: black;
 	font-size: 1.0em;
 	line-height: 1.5;
-	padding: 0.6em 0.8em;
-	min-width: 280px;
-	width: 23vw;
-	background-color: rgb(166, 187, 161);
-	border: outset rgb(166, 187, 161);
-	cursor: move;
+	padding: 0.6em 0.6em;
+	background-color: var(--menucolor);
+}
+
+
+
+#signs:hover{
+	left:-5%;
 }
 
 #signsheader{
@@ -183,6 +186,17 @@ nav h1, nav h2{
 nav h2{
 	font-size: 0.9em;
 	line-height: 1.1;
+}
+
+/* ABOUT */
+#gijsgarden div{
+	width: 400px;
+	max-height: 90vh;
+	overflow-x: visible;
+	overflow-y: scroll;
+}
+#gijsgarden h1, h2, h3 {
+	font-weight: normal;
 }
 
 /* HIGHLIGHTS */
@@ -219,7 +233,7 @@ summary:hover,label:hover,a:hover{
   color: tomato;
 }
 input {
-	visibility: hidden;
+	display: none;
 }
 
 .btn {
@@ -233,7 +247,7 @@ input {
   }
 
 input:checked + .btn {
-	background-color: var(--bg-color);
+	background-color: darkolivegreen;
 	/* border-color: coral; */
 }
 
@@ -310,23 +324,19 @@ nav label + a {
 	display: block;
 	/* visibility: visible; */
 	z-index: 1;
-	
 }
 
 .plant {
-	-webkit-filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.3));
-	filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 1.0));
-	/* cursor: url("images/spades/tinyspadeb.png") 0 31, zoom-in; */
+	/* -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3)); */
+	/* filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3)); */
 	cursor: cell;
-	position: fixed;
+	position: absolute;
 	width: 5vw;
 	min-width: 40px;
 	display: block;
 	transform: translate(-50%, -50%);
 	z-index: 0;
 	transition: 0.1s;
-	/* filter: drop-shadow(0px 0px 2px black); */
-
 }
 
 .plant:hover {
@@ -336,26 +346,34 @@ nav label + a {
 
 .highlight {
 	-webkit-filter: drop-shadow(2px 2px 5px floralwhite);
-	filter: drop-shadow(0px 0px 10px rgb(255, 255, 0, 0.7));
+	filter: drop-shadow(0px 0px 5px rgb(255, 255, 0, 0.5));
 	z-index: 4;
+
 }
 
 .plant img{
-	width:inherit;
+	width: inherit;
 	min-width: 40px;
+	transition: 0.1s;
 }
+
 .plant img:hover{
+	width: 12vw;
+	margin-left:-4vw;
+	margin-top:2vh;
+	z-index: 4;
+}
+
+.highlight img{
 	width: 8vw;
 	margin-left:-2vw;
 	margin-top:2vh;
-	z-index: 4;
 }
 
 /* THE CARDS */
 
 .card {
-  position: fixed;
-  /* background-color: rgba(255, 255, 255, 0.25); */
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
@@ -366,6 +384,7 @@ nav label + a {
   pointer-events: none;
   transition: all 0.1s;
   font-size: 1.2em;
+  color: var(--text-color);
 }
 .card:target {
 	visibility: visible;
@@ -413,7 +432,7 @@ a.back {
   position: absolute;
   right: 0;
   top: 0;
-  width: 70px;
+  width: 50px;
   text-decoration: none;
 }
 
@@ -463,10 +482,10 @@ footer {
 	bottom: 0;
 	right: 0;
 	/* width: 100vw; */
-	color: grey;
+	color: darkolivegreen;
 	/* background: rgba(255, 255, 255, 0.25); */
 	text-align: left;
-	padding-left: 5px;
+	padding-right: 5px;
 	line-height: 0;
 	z-index: 0;
 }
