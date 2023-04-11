@@ -26,7 +26,7 @@ body{
 	position: absolute;
 	right: 0;
 	height: 100vh;
-	width: 95vw;
+	width: 90vw;
 	overflow: hidden;
 }
 
@@ -151,22 +151,15 @@ body{
 #signs {
 	position: fixed;
 	top: 0px; 
-	left: -200px;
 	height: 100vh;
-	width: 200px;
+	width: 10vw;
+	min-width: 70px;
 	z-index: 10;
-	margin-left: 5%;
 	color: black;
 	font-size: 1.0em;
 	line-height: 1.5;
 	padding: 0.6em 0.6em;
 	background-color: var(--menucolor);
-}
-
-
-
-#signs:hover{
-	left:-5%;
 }
 
 #signsheader{
@@ -178,9 +171,9 @@ nav a{
 }
 
 nav h1, nav h2{
-	margin: 0.4em 0;
 	font-weight: normal;
 	text-align: center;
+	line-height: 0.8;
 }
 
 nav h2{
@@ -240,7 +233,7 @@ input {
 	display: inline-block;
 	height: 12px;
 	width: 12px;
-	margin-right: 5px;
+	margin-right: 3px;
 	border-radius: 6px;
 	border: 1px solid black;
 	background-color: none;
