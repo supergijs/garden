@@ -4,7 +4,7 @@
 	box-sizing: border-box;
 	/* --bg-color:rgb(42, 59, 42); */
 	--bg-color:rgb(174, 181, 168);
-	--menucolor: floralwhite;
+	--menucolor: rgb(236, 244, 225);
 	--text-color: rgb(28, 36, 28);
 }
 html, body {
