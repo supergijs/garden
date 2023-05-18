@@ -1,3 +1,15 @@
+// High contrast button;
+function clarity() {
+  var element = document.body;
+  element.classList.toggle("black");
+  var ground = document.getElementById('ground');
+  ground.classList.toggle("groundless");
+  var plants = document.getElementByClassName('plant');
+  for(plant of plants){plant.classList.toggle("green");}
+  var btn = document.getElementById('clarity');
+  btn.classList.toggle("on");
+}
+
 // MOVE PLANT WITH SLIDERS
 
   // cardSliders.addEventListener('change', e =>)
