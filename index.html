@@ -36,17 +36,18 @@
       <span class="btn"></span>
         Preface
     </label> <a href="#preface">(i)</a><br/> -->
-    <label for="icon">
-      <input type="checkbox" id="icon" checked/>
-      <span class="btn"></span>
-      Logos
-    </label> <a href="#iconinfo">ⓘ</a><br/>
     <label for="garden">
       <input type="checkbox" id="garden" checked/>
       <span class="btn"></span>
       Gardens
     </label> 
       <!-- <a href="#gardeninfo">ⓘ</a> --><br/>
+    <label for="icon">
+      <input type="checkbox" id="icon" checked/>
+      <span class="btn"></span>
+      Logos
+    </label> <a href="#iconinfo">ⓘ</a><br/>
+
     <label for="planthouse">
       <input type="checkbox" id="planthouse" checked/>
       <span class="btn"></span>
@@ -62,7 +63,13 @@
     <label for="world">
       <input type="checkbox" id="world" checked/>
       <span class="btn"></span>
-      Worlds
+      Earths
+    </label> 
+    <!-- <a href="#worldinfo">(i)</a> --><br/>
+    <label for="tool">
+      <input type="checkbox" id="tool" checked/>
+      <span class="btn"></span>
+      Tools
     </label> 
     <!-- <a href="#worldinfo">(i)</a> --><br/>
 
@@ -112,7 +119,7 @@
 <div id="ground">
   <button id="clarity" onclick="clarity()">soil</button>
 
-  <!-- GRID -->
+<!-- GRID -->
   <div id="crosshair-h" class="hair"></div>
   <div id="crosshair-v" class="hair"></div>
   <div class="label" id="left">
@@ -168,6 +175,239 @@
 
 
 <!-- LAYERS/FAMILIES -->
+
+<!-- GARDENS -->
+<div class="plants" id="gardens">
+
+  <a href="#zen" style="left: 95%; top: 87%;" class="plant">
+    <img src="/images/gardens/zen.jpg"/>
+  </a>
+  <div id="zen" class="card">
+    <a class="back" href="#"> </a>
+    <div>
+      <a href="#" class="card-close">X</a>
+      <img src="/images/gardens/zen.jpg" class="card-image"/>
+      <h3>family: garden plans</h3>
+      <h2>Zen Grip</h2>
+      <p>I admire the care necessary to create a bonsai, but the aesthetic bothers me in its unbothering, uptight cleanliness.</p>
+      <p>It's not because I wouldn't want to sit in that patch of grass over there. I do want to lay down, spread my arms and oh watch out I don't disturb the raked gravel waves. But I don't want to let myself indulge. The seduction feels escapist, and ultimately, lonely.</p>
+      <p>Precision is intense engagement plus strong grip. There is listening – paths responding to rocks – but any green is kept neat within the lines.</p>
+    </div>
+  </div>
+
+  <a href="#victorian" style="left: 93%; top: 94%;" class="plant">
+    <img src="/images/gardens/germanbird.jpg"/>
+  </a>
+  <div id="victorian" class="card">
+    <a class="back" href="#"> </a>
+    <div>
+      <a href="#" class="card-close">X</a>
+      <img src="/images/gardens/victoriangarden.jpg" class="card-image"/>
+      <h3>family: garden plans</h3>
+      <h2>Victory</h2>
+      <p>In a Victorian garden, design has won and everything blooms.</p>
+      <p>There is an honesty to the artificiality, and a vulnerability to the idealised expression of hills and flowerfields. At least I feel some resonance with the romantic painting.</p>
+      <p>The blooming is a feat, a brushstroke that keeps on asking. A tableau vivant that is codependent on the flowers growing. But where they grow and from where they are watched is set with a subtle fence. </p>
+    </div>
+  </div>
+
+  <a href="#laby" style="" class="plant">
+    <img src="/images/gardens/dutchlaby.jpg"/>
+  </a>
+  <div id="laby" class="card">
+    <a class="back" href="#"> </a>
+    <div>
+      <a href="#" class="card-close">X</a>
+      <img src="/images/gardens/dutchlaby.jpg" class="card-image"/>
+      <h3>family: garden plans</h3>
+      <h2>Looking for Nature</h2>
+      <p>In this Dutch labyrinth it's harder to find wilderness than the exit.</p>
+      <p>Plants have a functional role here, and care is reduced to maintaining a homogenous hedge that you can't see through.</p>
+      <p>Control is key. The disorientation only works when there are no contingencies to discover.</p>
+      <label>care</label>
+      <input type="range" name="care" value="65">
+      <br>
+      <label>control</label>
+      <input type="range" name="control" value="97">
+      <!-- <output></output> -->
+    </div>
+  </div>
+
+  <a href="#tele" style="left: 4%; top: 96%;" class="plant">
+    <img src="/images/gardens/truetele.jpg"/>
+  </a>
+  <div id="tele" class="card">
+    <a class="back" href="#"> </a>
+    <div>
+      <a href="#" class="card-close">X</a>
+      <img src="/images/gardens/teleland.jpg" class="card-image"/>
+      <h3>family: garden plans</h3>
+      <h2>Garden as Set</h2>
+      <p>In the Eden of the Teletubbies, nature is a set, a virtual background for soft drama to play out.</p>
+      <p>The hilled fields need to be as spotless as a greenscreen, or they would foreground themselves, breaking the illusion that the set is not real.</p>
+      <p>The grass is controlled to the extent that it could have been fake, so far away the smells and dirt. Televised, literally 'seen from afar'.</p>
+    </div>
+  </div>
+
+  <a href="#golf" style="left: 25%; top: 94%;" class="plant">
+    <img src="/images/gardens/golf.jpg"/>
+  </a>
+  <div id="golf" class="card">
+    <a class="back" href="#"> </a>
+    <div>
+      <a href="#" class="card-close">X</a>
+      <img src="/images/gardens/golf.jpg" class="card-image"/>
+      <h3>family: garden plans</h3>
+      <h2>Garden as Field</h2>
+      <p>No lawn greener than a golf course in the desert.</p>
+      <p>There are allusions to landscape: hills, sand dunes, patches of trees. But there's no illusion made.</p>
+      <p>The grass is a sports pitch, a rolled out augmented reality mat for games and anonymous meetings.</p>
+      <img src="/images/gardens/golffire.jpg" class="card-image"/>
+    </div>
+  </div>
+
+  <a href="#persian" style="left: 75%; top: 74%;" class="plant">
+    <img src="/images/gardens/persiancarpet.jpg"/>
+  </a>
+  <div id="persian" class="card">
+    <a class="back" href="#"> </a>
+    <div>
+      <a href="#" class="card-close">X</a>
+      <img src="/images/gardens/persiangarden.jpg" class="card-image"/>
+      <h3>family: garden plans</h3>
+      <h2>Growing Carpet</h2>
+      <p>Persian carpets mirror garden plans, but mostly as a map or a screenshot. Within the actual garden, the lines drawn are just the stage on which blooming can happen.</p>
+      <p>There's a combination between functionality with irrigation channels, and symmetry, a kind of technical aesthetics. Landscape seems far away.</p>
+      <p>The edges are more rough than the Victorian garden, fat brick marked fields of slight (if often homogenous) chaos.</p>
+    </div>
+  </div>
+
+  <a href="#hockney" style="left: 65%; top: 24%;" class="plant">
+    <img src="/images/gardens/hockneygarden.jpg"/>
+  </a>
+  <div id="hockney" class="card">
+    <a class="back" href="#"> </a>
+    <div>
+      <a href="#" class="card-close">X</a>
+      <img src="/images/gardens/hockneygarden.jpg" class="card-image"/>
+      <h5>(painting: David Hockney)</h5>
+      <h3>family: garden plans</h3>
+      <h2>Personal Jungle</h2>
+      <p>There is the fantasy of creating the jungle. Of building an arrangement of plants wild enough to create a sense of surprise.</p>
+      <p>I think it's close to my ideal garden. Of course its planted at first, but it only fully gets there when it grows beyond the plan.</p>
+      <p>It may look effortless but my first concern would be keeping the plants alive. I realise that I presume that it would exist in the Netherlands. If so, it could only ever exist as a well-tended vignette.</p>
+      <p>But let me choose to imagine it in Sicily. Less control, less care?</p>
+    </div>
+  </div>
+
+  <a href="#lawn" style="left: 42%; top: 92%;" class="plant">
+    <img src="/images/gardens/lawn.jpg"/>
+  </a>
+  <div id="lawn" class="card">
+    <a class="back" href="#"> </a>
+    <div>
+      <a href="#" class="card-close">X</a>
+      <img src="/images/gardens/lawn.jpg" class="card-image"/>
+      <!-- <h5>(image: David Hockney)</h5> -->
+      <h3>family: garden plans</h3>
+      <h2>Garden as Carpet</h2>
+      <p>Some Wise Man might have said, if you want to assert your will over the world, first clean your lawn.</p>
+      <p>A blank slate, but also a place to host. BBQ, badminton, somersaults, a private camping, an outdoor green-carpetted room.</p>
+      <p>It sucks water and spits sprouts, turns yellow and melts into mud. A flat-laid weather report. It's just that when work is done, laying down, bare feet through the leaves, that distance dissolves.</p>
+    </div>
+  </div>
+
+  <a href="#cottage" style="left: 84%; top: 24%;" class="plant">
+    <img src="/images/gardens/cottagegardenpaint.jpg"/>
+  </a>
+  <div id="cottage" class="card">
+    <a class="back" href="#"> </a>
+    <div>
+      <a href="#" class="card-close">X</a>
+      <img src="/images/gardens/cottagegarden.jpg" class="card-image"/>
+      <h5>(thumbnail: Helen Allingham)</h5>
+      <h3>family: garden plans</h3>
+      <h2>Garden as Return</h2>
+      <p>The small gardens around Medieval English cottages functioned first to feed the appetite of their caretakers. Later they fulfilled the romantic aesthetic longing of a return to nature. They became an #aesthetic.</p> 
+      <p>Opposed to the imposed 'carpet bedding' order of Victorian gardens, cottage style offered informality and density. It's Romantic and Arts & Crafts – just like cottagecore.</p>
+      <p>Cottage gardens capture a design paradox. How to make something wild? Natural even? Mixing plants helps give a 'casual' feel.</p>
+      <p>One famous follower of the trend was Claude Monet with his Giverny garden, and that's how it turned back into art.</p>
+    </div>
+  </div>
+
+  <a href="#chinese" style="left: 78%; top: 54%;" class="plant">
+    <img src="/images/gardens/chinesegarden.jpg"/>
+  </a>
+  <div id="chinese" class="card">
+    <a class="back" href="#"> </a>
+    <div>
+      <a href="#" class="card-close">X</a>
+      <img src="/images/gardens/moongate.jpg" class="card-image"/>
+      <!-- <h5>(thumbnail: Helen Allingham)</h5> -->
+      <h3>family: garden plans</h3>
+      <h2>Garden as Film</h2>
+      <p>Through the Moon Gate, a Borrowed View, a pond with Mandarin Ducks and a Scholar Stone. Things are named, which suggests things are placed.</p>
+      <p>The Chinese garden felt chaotic to westeners. There is no overview, you only see parts at a time. Still these views are carefully crafted.</p>
+      <p>The kind of craft is specific though. It's not so much based on creation, but more on curation. Using found 'scholar' stones, borrowing views from outside the garden, embedding seasonal fragrants into the design and names of pavilions.</p>
+    </div>
+  </div>
+
+  <a href="#hni" style="left: 33%; top: 8%;" class="plant">
+    <img src="/images/gardens/hninewgarden.jpg"/>
+  </a>
+  <div id="hni" class="card">
+    <a class="back" href="#"> </a>
+    <div>
+      <a href="#" class="card-close">X</a>
+      <img src="/images/gardens/newgarden.jpg" class="card-image"/>
+      <!-- <h5>(thumbnail: Helen Allingham)</h5> -->
+      <h3>family: garden plans</h3>
+      <h2>Garden as Vacant Lot</h2>
+      <p>Construction sites often turn into unintended scenes of urban rewilding. In between concrete slabs and drainage pipes, a blossoming bouquet of plants usually considered weeds.</p>
+      <p>This was the model and aesthetic for The New Garden of the Nieuwe Instituut in Rotterdam. As far as design goes, Hans Engelbrecht and Frank Bruggeman introduced some building materials and sand heaps in 2015, and plants did the rest.</p> 
+      <p>In a few years, the garden was filled with a wild range of plants. So wild it invited illicit encounters between those who dwell well when hidden from sight. Reason enough for the municipality to start weeding out.
+      </p>
+    </div>
+  </div>
+
+  <a href="#morada" style="left: 83%; top: 32%;" class="plant">
+    <img src="/images/gardens/casamorada.jpg"/>
+  </a>
+  <div id="morada" class="card">
+    <a class="back" href="#"> </a>
+    <div>
+      <a href="#" class="card-close">X</a>
+      <img src="/images/gardens/casamorada.jpg" class="card-image"/>
+      <!-- <h5>(thumbnail: Helen Allingham)</h5> -->
+      <h3>family: garden plans</h3>
+      <h2>Garden as Jungle</h2>
+      <p>Local subtropical species in wild beds with original Florida sand. This is getting close to the Hockney painting. An original personal paradise by Raymond Jungles.</p>
+      <p>Perhaps to increase the perception of wilderness by contrast, Raymond introduced some concrete monoliths. They work for me. Especially with that soft crisp sand.</p> 
+      <p>The Casa Morada is a luxury hotel. Perhaps it says something about the personal jungle dream. It's not very affordable to have a worry-free jungle experience. The best service remains invisible.
+      </p>
+    </div>
+  </div>
+
+  <a href="#zollverein" style="left: 73%; top: 12%;" class="plant">
+    <img src="/images/gardens/zollverein.jpg"/>
+  </a>
+  <div id="zollverein" class="card">
+    <a class="back" href="#"> </a>
+    <div>
+      <a href="#" class="card-close">X</a>
+      <img src="/images/gardens/newgarden.jpg" class="card-image"/>
+      <!-- <h5>(thumbnail: Helen Allingham)</h5> -->
+      <h3>family: garden plans</h3>
+      <h2>Garden as Mushroom</h2>
+      <p>When the Planergruppe designed the landscape of a derrilict old coal mine, they must have already found a landscape of post-industrial plants.</p>
+      <p>Zollverein was once Europe largest coal mine. Like other sites at the end of the industrial world, things grow. The Planergruppe tried to keep much of that, but added paths for humans to re-enter.</p> 
+      <p>There's something about the geometric paths following the old train tracks that I like. Honest, literally juxtaposing wildflowers and pedestrians. I just don't know if all insects can cross the conrete slabs.
+      </p>
+    </div>
+  </div>
+
+</div>
+
 <!-- ICONS -->
 <div class="plants" id="icons">
 
@@ -302,6 +542,134 @@
     </div>
   </div>
 
+  <a href="#bp" style="left: 11%; top: 74%;" class="plant">
+    <img src="/images/icons/bp.png"/>
+  </a>
+  <div id="bp" class="card">
+    <a class="back" href="#"> </a>
+    <div>
+      <a href="#" class="card-close">X</a>
+      <img src="/images/icons/bp.png" class="card-image"/>
+      <h3>family: Icons</h3>
+      <h2>Energy</h2>
+      <p>A seemingly solemn flower or sun, doing its own thing. I'm reading into it an energy journey from sun to leaf to fossil, but only because I know BP.</p>
+      <p>Naturalisation, not just as attaching images used to depict nature (which it does), but ask making a practice seem normal, or natural.</p>
+      <p>There's a trust in the hope that natural equates good. But still, there's no flower this geometric. And apart from that no humans in sight.</p>
+    </div>
+  </div>
+
+  <a href="#spar" style="left: 27%; top: 78%;" class="plant">
+    <img src="/images/icons/spar.png"/>
+  </a>
+  <div id="spar" class="card">
+    <a class="back" href="#"> </a>
+    <div>
+      <a href="#" class="card-close">X</a>
+      <img src="/images/icons/spar.png" class="card-image"/>
+      <h3>family: Icons</h3>
+      <h2>Winter</h2>
+      <p>There's the idea of a lone tree. They happen, they haven't got many others to talk through on mycelium internet, so often it's just stage one of a forest.</p>
+      <p>In this logo it's conifer is centered also as a symbol, of course, in the middle of a dial, as framed by crosshairs or a round window.</p>
+      <p>The circle is not just isolating though, it also feels caring in a way, held safe in a snow globe. But mostly isolating and strictly kept triangular.</p>
+    </div>
+  </div>
+
+  <a href="#firefox" style="left: 15%; top: 54%;" class="plant">
+    <img src="/images/icons/firefox.png"/>
+  </a>
+  <div id="firefox" class="card">
+    <a class="back" href="#"> </a>
+    <div>
+      <a href="#" class="card-close">X</a>
+      <img src="/images/icons/firefoxevolve.jpg" class="card-image" style="width:300px;"/>
+      <h3>family: Icons</h3>
+      <h2>Hug</h2>
+      <p>I shouldn't get too biased by the sympathy of the company. Sure this looks like a warm hug by a fiery fox. But both fox and earth are not carethings here.</p>
+      <p>First, I shouldn't identify myself with the fox. Sure the fox would guide me through the World Wide Web, but it's not me. Apart from hugging it's also just territorially fencing off its play ball (way to small for an earth really).</p>
+      <p>Second, even if there is some warm fox-earth interaction here but we're outside observers. On the moon perhaps.</p>
+    </div>
+  </div>
+
+  <a href="#att" style="left: 11%; top: 42%;" class="plant">
+    <img src="/images/icons/att.png"/>
+  </a>
+  <div id="att" class="card">
+    <a class="back" href="#"> </a>
+    <div>
+      <a href="#" class="card-close">X</a>
+      <img src="/images/icons/att.png" class="card-image"/>
+      <h3>family: Icons</h3>
+      <h2>Racing</h2>
+      <p>A kind of wavy halftone stripe style that was quite popular in corporate tech in the eighties (?), forming a globe.</p>
+      <p>Stripes suggest speed. The toning now mostly suggest a lighter and darker side of the ball. Is it even an earth? A perfect sphere, spinning.</p>
+      <p>For some reason we are looking down on the ball, at least in relation to the spin of its stripes. This is the Blue Marble perspective.</p>
+    </div>
+  </div>
+
+  <a href="#un" style="left: 54%; top: 58%;" class="plant">
+    <img src="/images/icons/un.png"/>
+  </a>
+  <div id="un" class="card">
+    <a class="back" href="#"> </a>
+    <div>
+      <a href="#" class="card-close">X</a>
+      <img src="/images/icons/un.png" class="card-image"/>
+      <h3>family: Icons</h3>
+      <h2>Racing</h2>
+      <p>Wheat belongs to the family of grasses, which only really took off after the dinosaurs, to become the primary source of nutrition for humankind.</p>
+      <p>There's some humility in the earth being held or held together by an acknowledgement of these plants.</p>
+      <p>The particular projection from the north pole has the effect of enlarging the Global South, which is a bit emancipatory, even when projected onto a strict maritime compass grid.</p>
+    </div>
+  </div>
+
+  <a href="#icloud" style="left: 5%; top: 66%;" class="plant">
+    <img src="/images/icons/icloud.png"/>
+  </a>
+  <div id="icloud" class="card">
+    <a class="back" href="#"> </a>
+    <div>
+      <a href="#" class="card-close">X</a>
+      <img src="/images/icons/icloudgold.jpg" class="card-image"/>
+      <h3>family: Icons</h3>
+      <h2>Rain</h2>
+      <p>I used to be quite confused about the color of clouds as a kid, because we used to draw them in blue. Then I learned they are white, but then they are sometimes still blue-ish.</p>
+      <p>Anyways, the cloud-service logos often commit similar aesthetic crimes, just projecting clouds as blue.</p>
+      <p>Mostly, they reduced the cloud shape to a collection of perfect circles in golden ratios. Is it light or heavy?</p>
+    </div>
+  </div>
+
+  <a href="#canada" style="left: 56%; top: 72%;" class="plant">
+    <img src="/images/icons/aircanada.png"/>
+  </a>
+  <div id="canada" class="card">
+    <a class="back" href="#"> </a>
+    <div>
+      <a href="#" class="card-close">X</a>
+      <img src="/images/icons/aircanada.png" class="card-image"/>
+      <h3>family: Icons</h3>
+      <h2>Sweet</h2>
+      <p>Canada's national symbol was based on vegetation, one of the most common plants found. The air travel company altered the maple leaf slightly, giving it five distinct 'fingers' like a hand.</p>
+      <p>Why is the circle not closed? I don't think it's shading, that would make the leaf's stalk too wide. So perhaps it's a flight, around the world.</p>
+      <p>Anchoring yourself in native nature is something that seems both grounded and aloof, on ceded lands from native people.</p>
+    </div>
+  </div>
+
+  <a href="#panam" style="left: 3%; top: 88%;" class="plant">
+    <img src="/images/icons/panam.png"/>
+  </a>
+  <div id="panam" class="card">
+    <a class="back" href="#"> </a>
+    <div>
+      <a href="#" class="card-close">X</a>
+      <img src="/images/icons/globe.jpg" class="card-image"/>
+      <h3>family: Icons</h3>
+      <h2>Meatball</h2>
+      <p>The strange thing about the Panam logo is that the lines are curved in an inverse way. It looks less like a globe than a basketball.</p>
+      <p>That is, unless we imagine ourselves being inside the globe looking out. Then, the lines would be similar to Panam. Perhaps like those ball turrets of old war planes.</p>
+      <p>Not sure, but not careful either. What to expect, other than glossing earth as a trottable globe, as if your next destination is just an arm's lenght away. </p>
+    </div>
+  </div>
+
 </div>
 
 <div id="iconinfo" class="labeldef faminfo">
@@ -328,149 +696,6 @@
     </ol>
   </p>  
   </div>
-</div>
-
-<!-- GARDENS -->
-<div class="plants" id="gardens">
-
-  <a href="#zen" style="left: 95%; top: 87%;" class="plant">
-    <img src="/images/gardens/zen.jpg"/>
-  </a>
-  <div id="zen" class="card">
-    <a class="back" href="#"> </a>
-    <div>
-      <a href="#" class="card-close">X</a>
-      <img src="/images/gardens/zen.jpg" class="card-image"/>
-      <h3>family: garden plans</h3>
-      <h2>Zen Grip</h2>
-      <p>I admire the care necessary to create a bonsai, but the aesthetic bothers me in its unbothering, uptight cleanliness.</p>
-      <p>It's not because I wouldn't want to sit in that patch of grass over there. I do want to lay down, spread my arms and oh watch out I don't disturb the raked gravel waves. But I don't want to let myself indulge. The seduction feels escapist, and ultimately, lonely.</p>
-      <p>Precision is intense engagement plus strong grip. There is listening – paths responding to rocks – but any green is kept neat within the lines.</p>
-    </div>
-  </div>
-
-  <a href="#victorian" style="left: 93%; top: 94%;" class="plant">
-    <img src="/images/gardens/germanbird.jpg"/>
-  </a>
-  <div id="victorian" class="card">
-    <a class="back" href="#"> </a>
-    <div>
-      <a href="#" class="card-close">X</a>
-      <img src="/images/gardens/victoriangarden.jpg" class="card-image"/>
-      <h3>family: garden plans</h3>
-      <h2>Victory</h2>
-      <p>In a Victorian garden design has won and everything blooms.</p>
-      <p>There is an honesty to the artificiality, and a vulnerability to the idealised expression of hills and flowerfields. At least I feel some resonance with the romantic painting.</p>
-      <p>The blooming is a feat, a brushstroke that keeps on asking. A tableau vivant that is codependent on the flowers growing. But where they grow and from where they are watched is set with a subtle fence. </p>
-    </div>
-  </div>
-
-  <a href="#laby" style="" class="plant">
-    <img src="/images/gardens/dutchlaby.jpg"/>
-  </a>
-  <div id="laby" class="card">
-    <a class="back" href="#"> </a>
-    <div>
-      <a href="#" class="card-close">X</a>
-      <img src="/images/gardens/dutchlaby.jpg" class="card-image"/>
-      <h3>family: garden plans</h3>
-      <h2>Looking for Nature</h2>
-      <p>In this Dutch labyrinth it's harder to find wilderness than the exit.</p>
-      <p>Plants have a functional role here, and care is reduced to maintaining a homogenous hedge that you can't see through.</p>
-      <p>Control is key. The disorientation only works when there are no contingencies to discover.</p>
-      <label>care</label>
-      <input type="range" name="care" value="65">
-      <br>
-      <label>control</label>
-      <input type="range" name="control" value="97">
-      <!-- <output></output> -->
-    </div>
-  </div>
-
-  <a href="#tele" style="left: 4%; top: 96%;" class="plant">
-    <img src="/images/gardens/truetele.jpg"/>
-  </a>
-  <div id="tele" class="card">
-    <a class="back" href="#"> </a>
-    <div>
-      <a href="#" class="card-close">X</a>
-      <img src="/images/gardens/teleland.jpg" class="card-image"/>
-      <h3>family: garden plans</h3>
-      <h2>Garden as Set</h2>
-      <p>In the Eden of the Teletubbies, nature is a set, a virtual background for soft drama to play out.</p>
-      <p>The hilled fields need to be as spotless as a greenscreen, or they would foreground themselves, breaking the illusion that the set is not real.</p>
-      <p>The grass is controlled to the extent that it could have been fake, so far away the smells and dirt. Televised, literally 'seen from afar'.</p>
-    </div>
-  </div>
-
-  <a href="#golf" style="left: 25%; top: 94%;" class="plant">
-    <img src="/images/gardens/golf.jpg"/>
-  </a>
-  <div id="golf" class="card">
-    <a class="back" href="#"> </a>
-    <div>
-      <a href="#" class="card-close">X</a>
-      <img src="/images/gardens/golf.jpg" class="card-image"/>
-      <h3>family: garden plans</h3>
-      <h2>Garden as Field</h2>
-      <p>No lawn greener than a golf course in the desert.</p>
-      <p>There are allusions to landscape: hills, sand dunes, patches of trees. But there's no illusion made.</p>
-      <p>The grass is a sports pitch, a rolled out augmented reality mat for games and anonymous meetings.</p>
-      <img src="/images/gardens/golffire.jpg" class="card-image"/>
-    </div>
-  </div>
-
-  <a href="#persian" style="left: 75%; top: 74%;" class="plant">
-    <img src="/images/gardens/persiancarpet.jpg"/>
-  </a>
-  <div id="persian" class="card">
-    <a class="back" href="#"> </a>
-    <div>
-      <a href="#" class="card-close">X</a>
-      <img src="/images/gardens/persiangarden.jpg" class="card-image"/>
-      <h3>family: garden plans</h3>
-      <h2>Growing Carpet</h2>
-      <p>Persian carpets mirror their garden plans, but mostly as a map or a screenshot. Within the actual garden, the lines drawn are just the stage on which blooming can happen.</p>
-      <p>There's a combination between functionality with irrigation channels, and symmetry, a kind of technical aesthetics. Landscape seems far away.</p>
-      <p>The edges are more rough than the Victorian garden, fat brick marked fields of slight (if often homogenous) chaos.</p>
-    </div>
-  </div>
-
-  <a href="#hockney" style="left: 65%; top: 24%;" class="plant">
-    <img src="/images/gardens/hockneygarden.jpg"/>
-  </a>
-  <div id="hockney" class="card">
-    <a class="back" href="#"> </a>
-    <div>
-      <a href="#" class="card-close">X</a>
-      <img src="/images/gardens/hockneygarden.jpg" class="card-image"/>
-      <h5>(painting: David Hockney)</h5>
-      <h3>family: garden plans</h3>
-      <h2>Personal Jungle</h2>
-      <p>There is the fantasy of creating the jungle. Of building an arrangement of plants wild enough to create a sense of surprise.</p>
-      <p>I think it's close to my ideal garden. Of course its planted at first, but it only fully gets there when it grows beyond the plan.</p>
-      <p>It may look effortless but my first concern would be keeping the plants alive. I realise that I presume that it would exist in the Netherlands. If so, it could only ever exist as a well-tended vignette.</p>
-      <p>But let me choose to imagine it in Sicily. Less control, less care?</p>
-    </div>
-  </div>
-
-  <a href="#lawn" style="left: 42%; top: 92%;" class="plant">
-    <img src="/images/gardens/lawn.jpg"/>
-  </a>
-  <div id="lawn" class="card">
-    <a class="back" href="#"> </a>
-    <div>
-      <a href="#" class="card-close">X</a>
-      <img src="/images/gardens/lawn.jpg" class="card-image"/>
-      <!-- <h5>(image: David Hockney)</h5> -->
-      <h3>family: garden plans</h3>
-      <h2>Garden as Carpet</h2>
-      <p>Some Wise Man might have said, if you want to assert your will over the world, first clean your lawn.</p>
-      <p>A blank slate, but also a place to host. BBQ, badminton, somersaults, a private camping, an outdoor green-carpetted room.</p>
-      <p>It sucks water and spits sprouts,turns yellow and melts into mud. A flat-laid weather report. It's just that when work is done, laying down, bare feet through the leaves, that distance dissolves.</p>
-    </div>
-  </div>
-
 </div>
 
 <!-- PLANTHOUSE -->
@@ -821,6 +1046,91 @@
 
 
   </div>
+</div>
+
+<!-- TOOLS -->
+<div class="plants" id="tools">
+
+  <a href="#composter" style="left: 83%; top: 18%;" class="plant">
+    <img src="/images/tools/composter.png"/>
+  </a>
+  <div id="composter" class="card">
+    <a class="back" href="#"> </a>
+    <div>
+      <a href="#" class="card-close">X</a>
+      <img src="/images/tools/compostaction.jpg" class="card-image"/>
+      <h3>family: garden tools</h3>
+      <h2>Compost</h2>
+      <p>
+        
+      </p>
+    </div>
+  </div>
+
+  <a href="#doormat" style="left: 31%; top: 72%;" class="plant">
+    <img src="/images/tools/doormat.png"/>
+  </a>
+  <div id="doormat" class="card">
+    <a class="back" href="#"> </a>
+    <div>
+      <a href="#" class="card-close">X</a>
+      <img src="/images/tools/doormat.png" class="card-image"/>
+      <h3>family: garden tools</h3>
+      <h2>Dirt</h2>
+      <p>
+        
+      </p>
+    </div>
+  </div>
+
+  <a href="#spray" style="left: 83%; top: 28%;width: 40px;" class="plant">
+    <img src="/images/tools/spray.png"/>
+  </a>
+  <div id="spray" class="card">
+    <a class="back" href="#"> </a>
+    <div>
+      <a href="#" class="card-close">X</a>
+      <img src="/images/tools/sprayaction.jpg" class="card-image"/>
+      <h3>family: garden tools</h3>
+      <h2>Moist</a></h2>
+      <p>
+        
+      </p>
+    </div>
+  </div>
+
+  <a href="#pot" style="left: 73%; top: 82%;" class="plant">
+    <img src="/images/tools/pot.png"/>
+  </a>
+  <div id="pot" class="card">
+    <a class="back" href="#"> </a>
+    <div>
+      <a href="#" class="card-close">X</a>
+      <img src="/images/tools/pot.jpg" class="card-image"/>
+      <h3>family: garden tools</h3>
+      <h2>Home</a></h2>
+      <p>
+        
+      </p>
+    </div>
+  </div>
+
+  <a href="#flowerpress" style="left: 34%; top: 42%;" class="plant">
+    <img src="/images/tools/flowerpress.png"/>
+  </a>
+  <div id="flowerpress" class="card">
+    <a class="back" href="#"> </a>
+    <div>
+      <a href="#" class="card-close">X</a>
+      <img src="/images/tools/pressedflower.jpg" class="card-image"/>
+      <h3>family: garden tools</h3>
+      <h2>Preservation</a></h2>
+      <p>
+        
+      </p>
+    </div>
+  </div>
+
 </div>
 
 
