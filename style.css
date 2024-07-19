@@ -75,10 +75,10 @@ body{
 	background-position: center;
 	background-size: cover; 
     opacity:0.9;
-	-webkit-transition: opacity 0.3s ease;
-	-o-transition: opacity 0.3s ease;
-	-moz-transition: opacity 0.3s ease;
-	transition: opacity 0.3s ease;
+	-webkit-transition: opacity 0.3s linear;
+	-o-transition: opacity 0.3s linear;
+	-moz-transition: opacity 0.3s linear;
+	transition: opacity 0.3s linear;
 }
 
 #ground.groundless:hover:before{
@@ -220,6 +220,7 @@ body{
 	line-height: 1.5;
 	padding: 0.6em 0.6em;
 	background-color: var(--menucolor);
+	overflow-y: scroll;
 }
 
 #signsheader{

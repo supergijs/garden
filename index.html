@@ -35,7 +35,7 @@
       <input type="checkbox" id="myplant" checked/>
       <span class="btn"></span>
         Preface
-    </label> <a href="#preface">(i)</a><br/> -->
+    </label> <a href="#preface">ⓘ</a><br/> -->
     <label for="garden">
       <input type="checkbox" id="garden" checked/>
       <span class="btn"></span>
@@ -59,37 +59,103 @@
       <span class="btn"></span>
       Natures
     </label> 
-    <!-- <a href="#natureinfo">ⓘ</a> --> <br/> 
+    <a href="#natureinfo">ⓘ</a> <br/> 
+    <label for="role">
+      <input type="checkbox" id="role" checked/>
+      <span class="btn"></span>
+      Selves
+    </label> 
+    <!-- <a href="#natureinfo">ⓘ</a> <br/>  -->
     <label for="world">
       <input type="checkbox" id="world" checked/>
       <span class="btn"></span>
       Earths
     </label> 
-    <!-- <a href="#worldinfo">(i)</a> --><br/>
+    <!-- <a href="#worldinfo">ⓘ</a> --><br/>
     <label for="tool">
       <input type="checkbox" id="tool" checked/>
       <span class="btn"></span>
       Tools
     </label> 
-    <!-- <a href="#worldinfo">(i)</a> --><br/>
+    <!-- <a href="#worldinfo">ⓘ</a> --><br/>
     <label for="plant">
       <input type="checkbox" id="plant" checked/>
       <span class="btn"></span>
       Plants
     </label> 
-    <!-- <a href="#worldinfo">(i)</a> --><br/>
-    <label for="food">
-      <input type="checkbox" id="food" checked/>
-      <span class="btn"></span>
-      Foods
-    </label> 
-    <!-- <a href="#worldinfo">(i)</a> --><br/>
+    <!-- <a href="#worldinfo">ⓘ</a> --><br/>
     <label for="future">
       <input type="checkbox" id="future" checked/>
       <span class="btn"></span>
       Futures
     </label> <a href="#futuresinfo">ⓘ</a><br/>
+    <br>
+
+    <h3>Thoughts</h3>
+    <a href="#futuresinfo">On post-growth compass</a><br>
+    <a href="#robida">On power tools</a><br>
+
+
 </nav>
+
+
+<!-- FIELD -->
+<div id="ground">
+  <button id="clarity" onclick="clarity()">soil</button>
+
+<!-- GRID -->
+  <div id="crosshair-h" class="hair"></div>
+  <div id="crosshair-v" class="hair"></div>
+  <div class="label" id="left">
+    <a href="#neglect"><h2>neglect</h2></a>
+    <!-- <details>
+      <summary>
+        <h2>neglect</h2>
+      </summary>
+      <p>When the technology feels like it increases the distance between human and plant.</p>
+    </details> -->
+  </div>
+  <div class="label" id="right">
+    <a href="#care"><h2>care</h2></a>
+  </div>
+  <div class="label" id="top">
+    <a href="#trust"><h2>trust</h2></a>
+  </div>
+  <div class="label" id="bottom">
+    <a href="#control"><h2>control</h2></a>
+  </div>
+
+<div id="trust" class="labeldef">
+  <a href="#" class="back"></a>
+  <div>
+    <h2>Trust</h2>
+    <p>When an instance of design invites a relation with plants where plants get space to move or make mess.</p>
+  </div>
+</div>
+
+<div id="care" class="labeldef">
+  <a href="#" class="back"></a>
+  <div>
+    <h2>Care</h2>
+    <p>When design structures a relation where human and plant are involved with each other.</p>
+  </div>
+</div>
+
+<div id="neglect" class="labeldef">
+  <a href="#" class="back"></a>
+  <div>
+    <h2>Neglect</h2>
+    <p>When the technology feels like it increases the distance between human and plant.</p>
+  </div>
+</div>
+
+<div id="control" class="labeldef">
+  <a href="#" class="back"></a>
+  <div>
+    <h2>Control</h2>
+    <p>When technology gives humans more agency over how plants grow or don't grow.</p>
+  </div>
+</div>
 
 <div id="gijsgarden" class="labeldef">
   <a href="#" class="back"></a>
@@ -152,64 +218,6 @@
     <br><br> 
     If you're interested in discussing it or contributing a layer, send me an <a href="mailto:info@supergijs.com">email</a> or <a href="https://instagram.com/super.gijs">dm</a>.
   </p>
-  </div>
-</div>
-
-<!-- FIELD -->
-<div id="ground">
-  <button id="clarity" onclick="clarity()">soil</button>
-
-<!-- GRID -->
-  <div id="crosshair-h" class="hair"></div>
-  <div id="crosshair-v" class="hair"></div>
-  <div class="label" id="left">
-    <a href="#neglect"><h2>neglect</h2></a>
-    <!-- <details>
-      <summary>
-        <h2>neglect</h2>
-      </summary>
-      <p>When the technology feels like it increases the distance between human and plant.</p>
-    </details> -->
-  </div>
-  <div class="label" id="right">
-    <a href="#care"><h2>care</h2></a>
-  </div>
-  <div class="label" id="top">
-    <a href="#trust"><h2>trust</h2></a>
-  </div>
-  <div class="label" id="bottom">
-    <a href="#control"><h2>control</h2></a>
-  </div>
-
-<div id="trust" class="labeldef">
-  <a href="#" class="back"></a>
-  <div>
-    <h2>Trust</h2>
-    <p>When an instance of design invites a relation with plants where plants get space to move or make mess.</p>
-  </div>
-</div>
-
-<div id="care" class="labeldef">
-  <a href="#" class="back"></a>
-  <div>
-    <h2>Care</h2>
-    <p>When design structures a relation where human and plant are involved with each other.</p>
-  </div>
-</div>
-
-<div id="neglect" class="labeldef">
-  <a href="#" class="back"></a>
-  <div>
-    <h2>Neglect</h2>
-    <p>When the technology feels like it increases the distance between human and plant.</p>
-  </div>
-</div>
-
-<div id="control" class="labeldef">
-  <a href="#" class="back"></a>
-  <div>
-    <h2>Control</h2>
-    <p>When technology gives humans more agency over how plants grow or don't grow.</p>
   </div>
 </div>
 
@@ -455,6 +463,24 @@
       <p>Zollverein was once Europe largest coal mine. Like other sites at the end of the industrial world, things grow. The Planergruppe tried to keep much of that, but added paths for humans to re-enter.</p> 
       <p>There's something about the geometric paths following the old train tracks that I like. Honest, literally juxtaposing wildflowers and pedestrians. I just don't know if all insects can cross the conrete slabs.
       </p>
+    </div>
+    <div class="bottom"></div>
+  </div>
+
+  <a href="#dendro" style="left: 31%; top: 35%;" class="plant">
+    <img src="/images/gardens/dendropark.jpg"/>
+  </a>
+  <div id="dendro" class="card">
+    <a class="back" href="#"> </a>
+    <div>
+      <a href="#" class="card-close">X</a>
+      <img src="/images/gardens/dendropark.jpg" class="card-image"/>
+      <!-- <h5>(thumbnail: Helen Allingham)</h5> -->
+      <h3>family: garden plans</h3>
+      <h2>Nursing Home</h2>
+      <p>Long lives in faraway places, stories for days. Sometimes you can make out a big circular scar  in the grass that reveals the trees only landed recently and are still rooting.</p>
+      <p>Shekvetili Dendrological Park realises a millionaire's dream of a zoo of elderly trees. Floated in from all around the world to this final resting spot.</p> 
+      <p>The mode of care invited exists in the register of wonder, and in the template of the hero's journey. As if it doesn't take a village to raise one, keep one alive, and be its object of protection. Will the hometown hero ever return? </p>
     </div>
     <div class="bottom"></div>
   </div>
@@ -1035,7 +1061,7 @@
     <a class="back" href="#"> </a>
     <div>
       <a href="#" class="card-close">X</a>
-      <img src="/images/natureviews/culturelandscape.jpg" class="card-image"/>
+      <img src="/images/natureviews/ecomodernist.jpg" class="card-image"/>
       <h3>family: views of nature</h3>
       <h2>Cultured Nature</h2>
       <p>Growing up in the Netherlands may have made me default to a view of nature as something made, or at least 'kept'. The human in the role of the steward, taking care of nature as of a garden the size of the planet. I'm not sure again, it feels hierarchical, too comfortable to assume the position of the one giving rather than needing care.</p>
@@ -1058,6 +1084,120 @@
     <h2>Care lessons</h2>
     <p>tbc</p>
     </div>
+</div>
+
+<!-- SELVES -->
+<div class="plants" id="roles">
+
+  <a href="#god" style="left:32%; top: 89%;" class="plant">
+    <img src="/images/roles/godmode.png"/>
+  </a>
+  <div id="god" class="card">
+    <a class="back" href="#"> </a>
+    <div>
+      <a href="#" class="card-close">X</a>
+      <img src="/images/roles/godforest.jpg" class="card-image"/>
+      <h3>family: roles to play</h3>
+      <h2>Farmers</h2>
+      <p>Turning to argiculture means turning your head; land is less a never-ending scroll than a project patch to cultivate. As if you're lifted from a horizontal gaze parallel to the land to one that looks down on it.</p>
+      <p>In the game Age of Empires you play godmode on growing a civilisation. The first steps include surveying the world you're thrown into for resources to extract and land to make productive.</p>
+      <p>Farmers specialise in how to make Nature work best for us. If this is what we do best, this role can extend to planetary time and space to think of how to organise resource cycles.</p>
+    </div>
+    <div class="bottom"></div>
+  </div>
+
+  <a href="#fruitface" style="left: 64%; top: 14%;" class="plant">
+    <img src="/images/roles/fruithead.png"/>
+  </a>
+  <div id="fruitface" class="card">
+    <a class="back" href="#"> </a>
+    <div>
+      <a href="#" class="card-close">X</a>
+      <img src="/images/roles/fruitface.jpg" class="card-image"/>
+      <h5>(painting: Giuseppe Arcimboldo)</h5>
+
+      <h3>family: roles to play</h3>
+      <h2>Foresters</h2>
+      <p>A dead tree is not always a problem. It feeds back into the soil, clears sunlight for new growers or leaves a gap that slows down fire.</p>
+      <p>If humans are an emergent property of Nature anyway, what can we learn from listening more closely to her wisdom.</p>
+      <p>Biomimicry implies the more humble student position. Even before running towards replica and appropriation, it admits a role that's in the rhythm of the forester's walk.</p>
+    </div>
+    <div class="bottom"></div>
+  </div>
+
+  <a href="#petri" style="left: 63%; top: 95%;" class="plant">
+    <img src="/images/roles/petri.png"/>
+  </a>
+  <div id="petri" class="card">
+    <a class="back" href="#"> </a>
+    <div>
+      <a href="#" class="card-close">X</a>
+      <img src="/images/roles/petri.jpg" class="card-image"/>
+      <h5>(in vitro hamburger by Mark Post)</h5>
+      <h3>family: roles to play</h3>
+      <h2>Designers</h2>
+      <p>More knowledge and more powers, more responsibilities? If we can eat meat without killing, killing becomes a moral choice.</p>
+      <p>To make science and technology useful, was the classical designer's duty, to improve our living conditions, including the very workings of Nature.</p>
+      <p>If we've come so far, and cut so many wounds on the way, would it not be the most restorative to put those tools of mastery to use in acts of creative repair?</p>
+    </div>
+    <div class="bottom"></div>
+  </div>
+
+  <a href="#vest" style="left: 87%; top: 67%;" class="plant">
+    <img src="/images/roles/vest.png"/>
+  </a>
+  <div id="vest" class="card">
+    <a class="back" href="#"> </a>
+    <div>
+      <a href="#" class="card-close">X</a>
+      <img src="/images/roles/gardener.jpg" class="card-image"/>
+      <h5>(film: Being There)</h5>
+
+      <h3>family: roles to play</h3>
+      <h2>Gardeners</h2>
+      <p>The tools in pockets and belts around the body. An unsuspected cyborg, covered by camouflage colours and fabrics. A slow stern scan.</p>
+      <p>There's a wisdom from maintaining lifelong relationships to plants, multiple and many. Knowing when to push back, when to support, when to let loose.</p>
+      <p>As their primary role, the gardener is focused on Life, even before it being productive or beautiful. The smell of orange and dotted vine shadows are happy fallout. But which Life remains the say of the gardener.</p>
+    </div>
+    <div class="bottom"></div>
+  </div>
+
+  <!-- <a href="#raker" style="left: 16%; top: 89%;" class="plant">
+    <img src="/images/roles/rake.png"/>
+  </a>
+  <div id="raker" class="card">
+    <a class="back" href="#"> </a>
+    <div>
+      <a href="#" class="card-close">X</a>
+      <img src="/images/roles/dyson.jpg" class="card-image"/>
+
+      <h3>family: roles to play</h3>
+      <h2>Rakers</h2>
+      <p>The tools in pockets and belts around the body. An unsuspected cyborg, covered by camouflage colours and fabrics. A slow stern scan.</p>
+      <p>There's a wisdom from maintaining lifelong relationships to plants, multiple and many. Knowing when to push back, when to support, when to let loose.</p>
+      <p>As their primary role, the gardener is focused on Life, even before it being productive or beautiful. The smell of orange and dotted vine shadows are happy fallout. But which Life remains the say of the gardener.</p>
+    </div>
+    <div class="bottom"></div>
+  </div> -->
+
+  <a href="#lover" style="left: 7%; top: 24%;" class="plant">
+    <img src="/images/roles/frame.png"/>
+  </a>
+  <div id="lover" class="card">
+    <a class="back" href="#"> </a>
+    <div>
+      <a href="#" class="card-close">X</a>
+      <img src="/images/roles/foggy.jpg" class="card-image"/>
+      
+      <h3>family: roles to play</h3>
+      <h2>Lovers</h2>
+      <p>Gazing out the castle window longing, noticing a colour, a breeze, a deer. It's gone, pops up, jumps through the flowers of a sunlit valley.</p>
+      <p>Would it be beautiful without someone being startled by it? Isn't that a role to be? Why enter the stage and spoil this perfect drama?</p>
+      <p>Desire needs distance is one lesson from love. But when the fog on the window only comes from one lover it's more of a lurk.</p>
+    </div>
+    <div class="bottom"></div>
+  </div>
+
 </div>
 
 <!-- WORLDS -->
@@ -1198,7 +1338,7 @@
     <a class="back" href="#"> </a>
     <div>
       <a href="#" class="card-close">X</a>
-      <img src="/images/tools/pot.jpg" class="card-image"/>
+      <img src="/images/tools/pot.png" class="card-image"/>
       <h3>family: garden tools</h3>
       <h2>Home</h2>
       <p>Originally plant pots were a solution to the problem of moving plants. They are a biomaterial shipping container. The slightly porous terracotta kept soil in while regulating water and air flows.</p>
@@ -1345,6 +1485,23 @@
     <div class="bottom"></div>
  </div>
 
+ <a href="#monobloc" style="left: 56%; top: 31%;" class="plant">
+  <img src="/images/tools/monobloc.png"/>
+</a>
+<div id="monobloc" class="card">
+  <a class="back" href="#"> </a>
+  <div>
+    <a href="#" class="card-close">X</a>
+    <img src="/images/tools/monoblocgreen.jpg" class="card-image"/>
+    <h3>family: garden tools</h3>
+    <h2>Company</h2>
+    <p>The lower back measures the distance to the soil in pain. And another bend and hunch and crouch. Earth is not a desk or workbench, more of a dirty floor.</p>
+    <p>Monobloc doesn't mind, with its curved feet and light weight it can stand loose ground. Rain washes dirt away through tactical holes, most of it. It may look alien but it's at home between the greens.</p>
+    <p>For an undeniable child of petrocapitalism it is surprisingly tolerant, unbothered even. It sits there so we can sit, rest our back, a trellis for leaning into the soil.</p>
+    </div>
+  <div class="bottom"></div>
+</div>
+
 </div>
 
 <!-- PLANTS -->
@@ -1372,52 +1529,144 @@
 
 
 <!-- FUTURES -->
-<div class="plants" id="plants">
+<div class="plants" id="futures">
 
-  <a href="#battlefield" style="left: 31%; top: 72%;" class="plant">
-    <img src="/images/worlds/googleearth.png"/>
+  <a href="#power" style="left: 67%; top: 86%;" class="plant">
+    <img src="/images/futures/compassfutures/controlstation.jpg"/>
   </a>
-  <div id="battlefield" class="card">
+  <div id="power" class="card">
     <a class="back" href="#"> </a>
     <div>
       <a href="#" class="card-close">X</a>
-      <img src="/images/worlds/bluemarble.png" class="card-image"/>
-      <h3>family: views of world</h3>
-      <h2>World as Battlefield</h2>
-      <p>"where good and evil are pitted against each other and forces of light struggle against the forces of darkness" (Macy).</p>
-      <p>In the Blue Marble, Earth is not only presented as vulnerable (to some it's like looking back from afar and feeling homesick), but also as holdable. As finite. As potential territory.</p>
-      <p>It admits familiar textures of clouds and waters, fractally scaled up to unimaginable scales, but divorced from how those waves feel, sound, smell, and shake you.</p>
+      <img src="/images/futures/compassfutures/controlstation.jpg" class="card-image"/>
+      <h3>family: post-growth futures</h3>
+      <h2>The World of Power</h2>
+      <h5>A critical reflection on the Central Command Center scenario</h5>
+      <p>While the Global Climate Control Room supervises and regulates most of atmospheric and
+      stratospheric activity, resistance can be found just below. You can see the nearby glass facades
+      slightly shake to the beat of the Degrowth Glitchpunk Clubscene hidden in defunct basements.</p>
+      <img src="/images/futures/compassfutures/club.jpg" class="card-image"/>
+      <p>They’ve seen the unshown, the grainy footage of what’s really going on in the offshore ‘green
+      oxygen facilities’: a true Geopark Ecosystem Collapse, the first sign of a crumbling order.</p>
+      <img src="/images/futures/compassfutures/biosphere.jpg" class="card-image"/>
+    </div>
+    <div class="bottom"></div>
+  </div>
+
+  <a href="#purity" style="left: 31%; top: 95%;" class="plant">
+    <img src="/images/futures/compassfutures/city.jpg"/>
+  </a>
+  <div id="purity" class="card">
+    <a class="back" href="#"> </a>
+    <div>
+      <a href="#" class="card-close">X</a>
+      <img src="/images/futures/compassfutures/city.jpg" class="card-image"/>
+      <h3>family: post-growth futures</h3>
+      <h2>The World of Purity</h2>
+      <h5>A critical reflection on the Walled Garden scenario</h5>
+      <p>The walls keep Nature clear of humanity’s dirty traces, much like they keep out the feral from the Autonomous Circular Cityscape. From the semi-constructed tower blocks at the edges of the city, filled with Vertical Favela Rooftop Gardens, you can see the impressive central citadel. </p>
+      <img src="/images/futures/compassfutures/favela.jpg" class="card-image"/>
+      <p>Fully lit and coiled by big cables or tubes that emerge from the ground like veins. Some say they lead to a Fully-Automated Geochemical Plant a 1000 miles away.</p>
+      <img src="/images/futures/compassfutures/chemicalplant.jpg" class="card-image"/>
+    </div>
+    <div class="bottom"></div>
+  </div>
+
+  <a href="#fertility" style="left: 84%; top: 83%;" class="plant">
+    <img src="/images/futures/vertifarmicon.jpg"/>
+  </a>
+  <div id="fertility" class="card">
+    <a class="back" href="#"> </a>
+    <div>
+      <a href="#" class="card-close">X</a>
+      <img src="/images/futures/compassfutures/farm.jpg" class="card-image"/>
+      <h3>family: post-growth futures</h3>
+      <h2>The World of Fertility</h2>
+      <h5>A critical reflection on the Nature as Production Partner scenario</h5>
+      <p>You may not see it right away, but the long people-dotted beach is lined with sandbanks housing 3D-printed Algae Datacenters, faster than any of the wood-wide web competitors could wish for.</p>
+      <img src="/images/futures/compassfutures/datacenter.jpg" class="card-image"/>
+      <p>These also provide the processing capacity for the Cybernetic Vertical Plantations where the e-algae, steak cubes and organisms alike are bred. Around inland forests you can find those who tried to raid this new aquatic infrastructure, marked by the distinct green on their skin from their favourite Hand-poked Chloroplast Studio.</p>
+      <img src="/images/futures/compassfutures/handpoke.jpg" class="card-image"/>
+    </div>
+    <div class="bottom"></div>
+  </div>
+  
+  <a href="#solidarity" style="left: 61%; top: 37%;" class="plant">
+    <img src="/images/futures/swampaesthetic.jpg"/>
+  </a>
+  <div id="solidarity" class="card">
+    <a class="back" href="#"> </a>
+    <div>
+      <a href="#" class="card-close">X</a>
+      <img src="/images/futures/compassfutures/medium.jpg" class="card-image"/>
+      <h3>family: post-growth futures</h3>
+      <h2>The World of Solidarity</h2>
+      <h5>A critical reflection on the Nature as Vocal Mentor scenario</h5>
+      <p>Language has long been overcome by Tentacular Translation AI-mediums, listening to the voices of the biosphere and amplifying them in words and images that reach and touch humans. Communities have organised around these oracles of their local ecosystems, negotiating conflicting desires in the Interspecies Town Center.</p>
+      <img src="/images/futures/compassfutures/avatar.jpg" class="card-image"/>
+      <p>Some humans were less happy with the voiced demands and challenges to their lifestyle, and to be honest, their comfortable position of power. The AI-mediums helped them monitor dissent in highly controlled Anthropo-supremacist Circus Islands.</p>
+      <img src="/images/futures/compassfutures/island.jpg" class="card-image"/>
+    </div>
+    <div class="bottom"></div>
+  </div>
+
+  <a href="#wonder" style="left: 41%; top: 48%;" class="plant">
+    <img src="/images/futures/compassfutures/jurassic.jpg"/>
+  </a>
+  <div id="wonder" class="card">
+    <a class="back" href="#"> </a>
+    <div>
+      <a href="#" class="card-close">X</a>
+      <img src="/images/futures/compassfutures/jurassic.jpg" class="card-image"/>
+      <h3>family: post-growth futures</h3>
+      <h2>The World of Wonder</h2>
+      <h5>A critical reflection on the New Genesis scenario</h5>
+      <p>Technology is where Nature becomes magical. Live mammoths, a whale-meat kitchen-counter breeding tank, the first dragon skin jacket. You better believe the hype, it really is the Resurrectionist Wild West. For these high precision (and high-risk) investments, reality entrepreneurs set up remote and self-sufficient Quarantine Biolab Bunkers.</p>
+      <img src="/images/futures/compassfutures/bunker.jpg" class="card-image"/>
+      <p>Yet the spectacle for the masses is the nightmare for those who see existing ecosystems degrade, even by the waste of those very biolabs. Some activist scientists appropriated DNA-sequencing techniques to craft organisms for Toxin-fed Primordial Swamps.</p>
+      <img src="/images/futures/compassfutures/swamp.jpg" class="card-image"/>
     </div>
     <div class="bottom"></div>
   </div>
 
 </div>
 
-  <div id="futuresinfo" class="labeldef faminfo">
+<div id="futuresinfo" class="labeldef faminfo">
     <a href="#" class="back"></a>
     <div>
-      <h3>family: graphic design, logos</h3>
-      <h1>I. Giving, holding, taking</h1>
-      <p>A collection of icons and logos that show a certain connection between humans and plants.</p>
-      <p>I think that many of them are meant to communicate a caring relationship, although there are also icons that rather seem to communicate distance or powerlessness, at least to me.</p>
-      <p>Still, a caring or engaged relation can sometimes also be a controlling one. The hand that supports may also limit how the plant can move.</p>
-      <p>In the end I'm looking for aesthetics that suggest (and through it, make) a caring but trusting relationship between humans and plans.</p>
-      <h2>Care lessons</h2>
-      <p>Learning from the logos that gives me a few things to keep in mind:
+      <h3>an essay on post-growth futures</h3>
+      <h5>A critical reflection on post-growth future scenarios developed by a think tank on human-technology-nature relations by Stichting Toekomstbeeld der Techniek. Published in the book "Voor niets gaat de zon op" by Lisa Hoedemakers and Daphne Groothuizen (2024).</h5>
+      <h1>Navigating knotted timelines</h1>
+      <p>It's not just institutes that speculate on the future of human-nature relations and the implications of emerging technologies. For many internet users it's a favourite pastime, perhaps born from a similar necessity to imagine alternatives to a prolonged present of technology-powered ecosystem collapse. Imagine that you could look into a futures cone like a spyglass, and see a whole range of vignettes of
+      possible and even preferable futures.</p>
+
+      <h2>A compass for the future</h2>
+      <p>The Future Compass is a type of meme where three internet phenomena come together: the Political Compass, edeologies, and visual-first future speculation. It pictures a grid of 16 different futures, ordered along two axes like Centralization-Atomization or Synthetic-Organic. This echoes the Political Compass, a grid that enables you to plot your political position on both a left-right and an authoritarian-libertarian axis. The Future Compass builds upon this predecessor by literally drawing out the implications of certain political positions on the world in 16 squares.</p>
+      <img src="/images/futures/futurecompass.jpg" class=""/>      
+      <h5>Example of a Future Compass meme</h5>
+      <p>Its aesthetics seem borrowed from video games, and make it feel like a menu to Choose Your World to play. Each of these futures mix ideological, technological, geographical and pop-cultural references to suggest whole worlds with only a tiny image and title. The titles are reminiscent of the fringe 'edeologies' that young internet subcultures use to identify themselves by remixing ideological pre- and suffixes. Think 'Cringe Solarpunk NEET Statism', or 'Liberal Pluralist Blue Church Imperium Eusociality'. Such niche worlds allow their creators to materialise their anxieties and hopes of the future in the style of internet fiction movements like cyberpunk and solarpunk, thereby offering their audiences a way to identify and navigate their dystopias and utopias.</p>
+      <p>At least, that seems to be the seduction of the Future Compass. When I look at one I feel like gaining some grip on how different politics may turn into different worlds, enabling me to root for the one that leads to my preferred future. But they come with limits familiar to future speculation. So when I was asked to shed a critical light on the future scenarios in this publication, I decided to use the Future Compass as an exaggerated lens to reflect on the seductions and limits of each scenario.</p>
+
+      <h2>Critical knots</h2>
+      <p>I was inspired by Joanna Pope's critical appropriation of the Future Compass.2 She wanted to use it for forging political alliances on the left, but had to overcome some challenges. The most important one for now is how the grid layout offers an illusion of giving a selection of separate self-contained timelines. This obscures how futures are complex and ambiguous; how certain scenarios may imply each other spatially – existing at the same time in different places – or temporally – leading into one another. </p>
+      <img src="images/futures/popecompass.jpg" alt="">
+      <h5>Alternative Future Compass by Joanna Pope</h5>
+      <p>Pope brings in the decolonial distinction of centre-periphery. Future speculation, especially the utopian kind, often focuses on the implications on areas where techno-social developments are used and consumed (the centre). This tends to sideline the conditions that make those worlds possible (periphery), including material resources, production networks, and waste management. Imperial metropoles relied on their colonies, just like consumption economies entail off-shore extraction and exploitation. Writer Elvia Wilk highlights that many speculative stories hinge on how "the corporate techno utopian aesthetic fantasy is one that depends on its counterpart, its tragic, dirty, hellish opposite".3 So in a Future Compass, two squares on opposite corners may just be two different places in the same future world.</p>
+      <p>That doesn't mean that life in this ‘centre’ is uniform. In the second think tank session, when elaborating on the scenarios, I was in a group focused on the Central Command Centre. We discussed how a second order effect might be the emergence of an underground punk scene. The ways that technologies are adopted often mirror the cultural distinction between mainstream and subculture, or even counterculture. For instance, the scenario of New Genesis could both manifest in 'resurrection-entrepreneurs' bringing spectacular species back to life (mainstream) and non-governmental organizations that genetically modify organisms to feed on pollution (subculture).</p>
+      <h2>The Post-Growth Compass</h2>
+      <p>As a critical reflection on the scenarios, I wanted to appropriate the Future Compass format by including some of the knots that exist between possible futures. I'm quite a fan of the world-building power of the captioned images in the compass, but how to shine a light on their shadows and entanglements? For each scenario, I tried to complexify the future imagined, by teasing out aspects that are less explicit or hidden in them. I first identified their central 'dramatic' value that would allow a narrative to spin around, like ‘power’ and ‘fertility’. Based on this value, I speculated on one countercultural version of each scenario, and one periphery-scenario focused on the infrastructure that would make the scenario possible. This resulted in 15 sub-scenarios that could be your post-growth future. </p>
+      <p>To make the entanglements explicit, the legend reveals how different scenarios are part of the same world. If you have one, you get the others. So if you would land on the 'centre' scenario, it may raise critical questions on its inherent limits. If you find a home in a periphery or counterculture scenario, it may expose the blind spots of its radicals. Does the counterculture not rely on the same peripheral conditions? Does a local focus leave a power vacuum for global institutions to take charge?</p>
+      <p>I like to find ways of using the seductions of control against itself, and hope this Future Compass may offer you both some recognition and some challenge. Although this publication is not an online thread with comments, I'm always curious to hear your thoughts on your Future and, in the spirit of memes, to see your version of the Compass.</p>
+      <img src="images/futures/finalcompass.jpg" alt="">
+      <h5>Post-Growth Compass, click for <a href="images/futures/compassfull.png">full size</a>.</h5>
+      <h2>References</h2>
       <ol>
-        <li>Even when then hands are on a distance, they can still feel caring, a safety net against gravity.
-        <img src="/images/icons/floatplant.png"/>
-        </li>
-        <li>I was surprised to find I can learn something from the nihilistic, namely distance. Does trust imply distance? When is a distance still a relation?
-          <img src="/images/icons/nihilism.png" class="white"/>
-        </li>
-        <li>Most icons, even the trustier ones, still stick to a convention to enlarge the human hands to about the size of the earth. Hidden anthropocentricism?
-          <img src="/images/icons/planetcatch.png"/>
-        </li>
+        <li>Joshua Citarella [@joshuacitarella]. 2021. 16 block grid of 16 block grids. On <a href="https://www.instagram.com/joshuacitarella/reel/CRZNBRTFDt4/">Instagram</a>.</li>
+        <li>Joanna Pope. 2019. Compass for Utopian Synthesis, on <a href="https://youtu.be/z23ADy2_JZY." target="_blank" rel="noopener noreferrer">Youtube</a>.</li>
+        <li>Elvia Wilk. 2022. Death By Landscape. New York: Soft Skull.</li>
       </ol>
-    </p>  
     </div>
-  </div>
+</div>
 
 </div>
 
