@@ -229,6 +229,11 @@ body{
 
 nav a{
 	color:inherit;
+	line-height: 1;
+}
+
+#signs a{
+	line-height: 1;
 }
 
 nav h1, nav h2{
@@ -361,15 +366,24 @@ nav label + a {
 }
 
 .faminfo ol{
-	list-style-type: upper-roman;
+	/* list-style-type: upper-roman; */
 }
 .faminfo li{
 	text-align: left;
+	margin-bottom: 0.5em;
 }
 
 .faminfo img{
 	width: 300px;
 	margin: 0.6em 0;
+}
+
+sup{
+	font-size: 0.7em;
+	line-height: 0;
+}
+sup a{
+	text-decoration: none;
 }
 
 /* THE PLANTS */
