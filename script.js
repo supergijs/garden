@@ -131,9 +131,6 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   });
 
-
-
-
   const tags = document.querySelectorAll('a.tag');
   const faminfoElements = document.querySelectorAll('.faminfo');
 
@@ -144,17 +141,19 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   };
 
-  // const showFaminfo = (element) => {
-  //   const parentFaminfo = element.closest('.faminfo');
-  //   if (parentFaminfo) {
-  //       parentFaminfo.style.display = 'block'; // Ensure it is visible
-  //   }
-  // };
+  // Function to show the closest faminfo element
+     const showFaminfo = (element) => {
+        const parentFaminfo = element.closest('.faminfo');
+        if (parentFaminfo) {
+            parentFaminfo.classList.add('visible');
+            // parentFaminfo.style.display = 'block'; // Ensure it is visible
+        }
+    };
 
   tags.forEach(tag => {
       tag.addEventListener('click', (event) => {
           const href = tag.getAttribute('href');
-          const targetElement = document.querySelector('href');
+          const targetElement = document.querySelector(href);
 
           if (targetElement && targetElement.classList.contains('card')) {
               // Hide all faminfo elements first
@@ -163,11 +162,15 @@ document.addEventListener('DOMContentLoaded', function() {
               // Find the parent .faminfo and make it visible
               let parentFaminfo = tag.closest('.faminfo');
               if (parentFaminfo) {
-                  parentFaminfo.style.display = 'block';
+                  parentFaminfo.classList.add('visible');
+                  // parentFaminfo.style.display = 'block';
               }
               
               // Update the URL hash to target the .card element
               window.location.hash = href;
+
+                // Add the 'shadow' class to the targeted .card element
+                targetElement.classList.add('shadow');              
 
               const closestFaminfo = tag.closest('.faminfo');
               if (closestFaminfo) {
@@ -179,17 +182,15 @@ document.addEventListener('DOMContentLoaded', function() {
                     backLink.setAttribute('href', `#${faminfoId}`);
 
                     // Add click event handler to the backLink to hide parentFaminfo
-                    // backLink.addEventListener('click', () => {
-                    //     // Prevent the default link behavior initially
+                    backLink.addEventListener('click', (event) => {
+                      parentFaminfo.classList.remove('visible');
 
-                    //     parentFaminfo.style.display = 'none';
-                    //     backLink.setAttribute('href', `#${faminfoId}`);
+                        // // Force a reload to ensure proper handling of faminfo visibility
+                        // window.location.hash = `#${faminfoId}`;
+                        // location.reload();
+                        // parentFaminfo.style.display = 'none';
 
-                    //     // Navigate to the href after hiding all faminfo
-                    //     setTimeout(() => {
-                    //     }, 0);
-
-                    // });
+                    });
                   }
               }
               

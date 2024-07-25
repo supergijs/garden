@@ -358,6 +358,10 @@ nav label + a {
 	background: floralwhite;
 }
 
+.visible{
+	display: block;
+}
+
 .faminfo div {
 	background-color: floralwhite;
 	color: black;
@@ -516,6 +520,11 @@ a.back {
 	height: 80vh;
 	overflow-y: scroll;
 }
+
+.shadow {
+	background-color: rgba(0,0,0,0.1);
+}
+
 div.bottom{
 	position: absolute;
 	height: 10vh;
