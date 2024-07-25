@@ -103,6 +103,135 @@ for(toggle of toggles) {
   });
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+  const tagLinks = document.querySelectorAll('a.tag');
+  const plantLinks = document.querySelectorAll('a.plant');
+
+  tagLinks.forEach(tagLink => {
+      tagLink.addEventListener('mouseenter', function() {
+          const href = tagLink.getAttribute('href');
+          plantLinks.forEach(plantLink => {
+              if (plantLink.getAttribute('href') === href) {
+                if (plantLink.getAttribute('href') === href) {
+                  plantLink.classList.add('highlight');
+              }
+              }
+          });
+      });
+
+      tagLink.addEventListener('mouseleave', function() {
+          const href = tagLink.getAttribute('href');
+          plantLinks.forEach(plantLink => {
+              if (plantLink.getAttribute('href') === href) {
+                if (plantLink.getAttribute('href') === href) {
+                  plantLink.classList.remove('highlight');
+                }
+              }
+          });
+      });
+  });
+
+
+
+
+  const tags = document.querySelectorAll('a.tag');
+  const faminfoElements = document.querySelectorAll('.faminfo');
+
+  // Function to hide all faminfo elements
+  const hideAllFaminfo = () => {
+      faminfoElements.forEach(faminfo => {
+          faminfo.style.display = 'none';
+      });
+  };
+
+  // const showFaminfo = (element) => {
+  //   const parentFaminfo = element.closest('.faminfo');
+  //   if (parentFaminfo) {
+  //       parentFaminfo.style.display = 'block'; // Ensure it is visible
+  //   }
+  // };
+
+  tags.forEach(tag => {
+      tag.addEventListener('click', (event) => {
+          const href = tag.getAttribute('href');
+          const targetElement = document.querySelector('href');
+
+          if (targetElement && targetElement.classList.contains('card')) {
+              // Hide all faminfo elements first
+              // hideAllFaminfo();
+
+              // Find the parent .faminfo and make it visible
+              let parentFaminfo = tag.closest('.faminfo');
+              if (parentFaminfo) {
+                  parentFaminfo.style.display = 'block';
+              }
+              
+              // Update the URL hash to target the .card element
+              window.location.hash = href;
+
+              const closestFaminfo = tag.closest('.faminfo');
+              if (closestFaminfo) {
+                  // Update the href of .back link in the targeted .card
+                  const backLink = targetElement.querySelector('a.back');
+                  if (backLink) {
+                    // Set the href to navigate back to the closest faminfo
+                    const faminfoId = closestFaminfo.id;
+                    backLink.setAttribute('href', `#${faminfoId}`);
+
+                    // Add click event handler to the backLink to hide parentFaminfo
+                    // backLink.addEventListener('click', () => {
+                    //     // Prevent the default link behavior initially
+
+                    //     parentFaminfo.style.display = 'none';
+                    //     backLink.setAttribute('href', `#${faminfoId}`);
+
+                    //     // Navigate to the href after hiding all faminfo
+                    //     setTimeout(() => {
+                    //     }, 0);
+
+                    // });
+                  }
+              }
+              
+              // Prevent the default link behavior
+              event.preventDefault();
+          }
+          // else{
+          //   hideAllFaminfo();
+          // }
+      });
+  });
+    
+
+});
+
+
+   // Add event listener for .back links to handle hiding faminfo elements
+   document.body.addEventListener('click', (event) => {
+    if (event.target.tagName === 'A' && event.target.classList.contains('back')) {
+        // Get the ID of the faminfo to navigate to
+        const href = event.target.getAttribute('href');
+        const targetFaminfo = document.querySelector(href);
+        
+        if (targetFaminfo && targetFaminfo.classList.contains('faminfo')) {
+            // Hide all faminfo elements
+            hideAllFaminfo();
+            
+            // Update the URL hash to target the faminfo
+            window.location.hash = href;
+
+            // Ensure the parent faminfo is hidden (additional handling)
+            targetFaminfo.style.display = 'none';
+        }
+        
+        // Prevent the default link behavior initially
+        event.preventDefault();
+    }
+});
+
+
+
+
 // Lines between plants
 
 // function getOffset( el ) {
