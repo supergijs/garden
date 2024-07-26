@@ -87,8 +87,8 @@ body{
 }
 
 #ground.groundless .plant img{
-	-webkit-filter: drop-shadow(3px 3px 3px rgb(0, 0, 0, 0.5));
-	filter: drop-shadow(3px 3px 3px rgb(0, 0, 0, 0.5));
+	/* -webkit-filter: drop-shadow(3px 3px 3px rgb(0, 0, 0, 0.5));
+	filter: drop-shadow(3px 3px 3px rgb(0, 0, 0, 0.5)); */
 }
 
 #ground.groundless .label h2 span{
