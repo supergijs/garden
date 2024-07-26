@@ -370,7 +370,8 @@ nav label + a {
 	border: none;
 	min-width: 400px;
 	width: 50vw;
-	max-width: 500px;
+	max-width: 800px;
+	font-size: 1.2em;
 }
 
 .faminfo h1, h2, h3 {
@@ -396,7 +397,8 @@ nav label + a {
 }
 
 .faminfo img{
-	width: 300px;
+	width: 80%;
+	max-width: 800px;
 	margin: 0.6em 0;
 }
 
@@ -626,6 +628,11 @@ footer a{
 }
 
 @media only screen and (max-width: 800px) {
+
+	#ground{
+		width: calc(100vw - 85px);
+	}
+
 	.card > div {
 		width: var(--cardwidth);
 		max-width: 400px;
@@ -652,5 +659,16 @@ footer a{
 	.labeldef div{
 		width: calc(var(--cardwidth) - 20px);
 		max-width: 300px;
+	}
+
+	.faminfo div{
+		width: 90%;
+		min-width: 200px;
+		max-width: 600px;
+		padding:0 5px;
+	}
+
+	.faminfo img{
+		width:100%;
 	}
 }
