@@ -207,7 +207,8 @@ body{
 
 .labeldef div{
 	position: absolute;
-	width: 300px;
+	width: 25%;
+	max-width: 800px;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
@@ -267,13 +268,22 @@ nav h2{
 
 /* ABOUT */
 #gijsgarden div{
-	width: 400px;
+	width: 40%;
 	max-height: 90vh;
 	overflow-x: visible;
 	overflow-y: scroll;
 }
 #gijsgarden h1, h2, h3 {
 	font-weight: normal;
+}
+
+#gijsgarden a{
+	color: coral;
+	text-decoration: none;
+}
+
+#gijsgarden a:hover{
+	text-decoration: underline;
 }
 
 /* HIGHLIGHTS */
@@ -293,10 +303,12 @@ a[name]:active{
 a[name]:hover::after {
 	content: attr(name);
 	position: absolute;
+	left:-1em;
+	top: 1.5em;
 	text-shadow: none;
 	background: VAR(--bg-color);
 	color: floralwhite;
-	width: 200px;
+	width: 100px;
 	padding: 5px;
 	border: 1px solid floralwhite;
 	z-index: 10;
@@ -657,6 +669,11 @@ footer a{
 	}
 
 	.labeldef div{
+		width: calc(var(--cardwidth) - 20px);
+		max-width: 300px;
+	}
+
+	#gijsgarden div{
 		width: calc(var(--cardwidth) - 20px);
 		max-width: 300px;
 	}
