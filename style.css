@@ -86,7 +86,7 @@ body{
 	opacity: 0.3;
 }
 
-#ground.groundless .plant{
+#ground.groundless .plant img{
 	-webkit-filter: drop-shadow(3px 3px 3px rgb(0, 0, 0, 0.5));
 	filter: drop-shadow(3px 3px 3px rgb(0, 0, 0, 0.5));
 }
