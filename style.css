@@ -368,6 +368,7 @@ nav label + a {
 .faminfo{
 	z-index: 2;
 	background: floralwhite;
+	overflow-y: auto;
 }
 
 .visible{
@@ -378,7 +379,7 @@ nav label + a {
 	background-color: floralwhite;
 	color: black;
 	max-height: 100vh;
-	overflow: scroll;
+	/* overflow: scroll; */
 	border: none;
 	min-width: 400px;
 	width: 50vw;
