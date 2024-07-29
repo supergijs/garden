@@ -369,6 +369,7 @@ nav label + a {
 	z-index: 2;
 	background: floralwhite;
 	overflow-y: auto;
+	overflow-x: hidden;
 }
 
 .visible{
