@@ -6,6 +6,7 @@
 	--bg-color:rgb(174, 181, 168);
 	--menucolor: rgb(236, 244, 225);
 	--text-color: rgb(28, 36, 28);
+	--extracolor: rgb(41, 60, 49);
 }
 html, body {
 	height: 100%;
@@ -213,10 +214,11 @@ body{
 	left: 50%;
 	transform: translate(-50%,-50%);
 	padding: 1em;
-	background: floralwhite;
+	background: var(--extracolor);
 	text-align: center;
-	color: black;
-	border: outset floralwhite 3px;
+	color: floralwhite;
+	border: outset var(--extracolor) 3px;
+	cursor: initial;
 }
 
 .labeldef p{
@@ -315,12 +317,12 @@ a[name]:hover::after {
   }
 
 /* FAMILY TOGGLES */
-summary{
+/* summary{
 	cursor: cell;
 }
 summary:hover,label:hover,a:hover{
   color: tomato;
-}
+} */
 input {
 	display: none;
 }
@@ -369,7 +371,7 @@ nav label + a {
 	z-index: 2;
 	background: floralwhite;
 	overflow-y: auto;
-	overflow-x: hidden;
+	overflow-x: hiddencard;
 }
 
 .visible{
@@ -436,6 +438,7 @@ sup a{
 a.tag{
 	color: green;
 	font-style: italic;	
+	cursor: crosshair;
 }
 
 /* THE PLANTS */
@@ -509,7 +512,7 @@ a.tag{
   opacity: 0;
   pointer-events: none;
   transition: all 0.1s;
-  font-size: 1.2em;
+  font-size: 1.4em;
   color: var(--text-color);
 }
 .card:target {
@@ -536,6 +539,7 @@ a.back {
 	text-align: center;
 	height: 80vh;
 	overflow-y: scroll;
+	cursor: initial;
 }
 
 .shadow {
