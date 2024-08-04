@@ -3,10 +3,12 @@
 * {
 	box-sizing: border-box;
 	/* --bg-color:rgb(42, 59, 42); */
-	--bg-color:rgb(174, 181, 168);
-	--menucolor: rgb(236, 244, 225);
+	--bg-color:rgb(173, 182, 165);
+	/* --menucolor: rgb(236, 244, 225); */
+	--menucolor: rgb(213, 224, 210);
 	--text-color: rgb(28, 36, 28);
-	--extracolor: rgb(41, 60, 49);
+	--extracolor: rgb(45, 54, 49);
+	--essaycolor: rgb(202, 214, 199);
 }
 html, body {
 	height: 100%;
@@ -228,6 +230,11 @@ body{
 	letter-spacing: 0.01em;
 }
 
+.labeldef ol{
+	list-style: upper-roman inside;
+	padding: 0;
+}
+
 /* NAV */
 #signs {
 	position: fixed;
@@ -369,9 +376,9 @@ nav label + a {
 
 .faminfo{
 	z-index: 2;
-	background: floralwhite;
+	background: var(--essaycolor);
 	overflow-y: auto;
-	overflow-x: hiddencard;
+	overflow-x: hidden;
 }
 
 .visible{
@@ -379,7 +386,7 @@ nav label + a {
 }
 
 .faminfo div {
-	background-color: floralwhite;
+	background-color: inherit;
 	color: black;
 	max-height: 100vh;
 	/* overflow: scroll; */
@@ -614,7 +621,7 @@ h5 {
 	font-family: 'Times New Roman', Times, serif;
 	font-weight: 100;
 	font-size: 0.6em;
-	color: #aaa;
+	color: rgba(0,0,0,0.6);
 	margin-top: 5px;;
 }
 
