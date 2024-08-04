@@ -121,7 +121,7 @@ body{
 
 #crosshair-h {
 	left: 120px;
-	right: 90px;
+	right: 120px;
     height:1px;
     top:50%;
 	transform: translate(0, -50%)
@@ -684,7 +684,7 @@ footer a{
 
 	#crosshair-h{
 		left: 90px;
-		right: 70px;
+		right: 90px;
 	}
 
 	.label{
