@@ -52,9 +52,9 @@ body{
 	background: grey;
 }
 #clarity.on{
-	background: inherit;
-	border: solid 1px black;
-	color: black;
+	background: var(--bg-color);
+	/* border: solid 1px black; */
+	/* color: black; */
 }
 
 #ground.groundless{

@@ -4,8 +4,8 @@ function clarity() {
   element.classList.toggle("black");
   var ground = document.getElementById('ground');
   ground.classList.toggle("groundless");
-  var plants = document.getElementByClassName('plant');
-  for(plant of plants){plant.classList.toggle("green");}
+  var plants = document.getElementsByClassName('plant');
+  // for(plant of plants){plant.classList.toggle('green');}
   var btn = document.getElementById('clarity');
   btn.classList.toggle("on");
 }
