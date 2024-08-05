@@ -62,7 +62,7 @@ body{
 }
 
 #clarity.on::after{
-	content:'no soil';
+	content:'air';
 }
 
 #ground.groundless{
