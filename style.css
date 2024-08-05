@@ -50,11 +50,19 @@ body{
 }
 #clarity:hover, #clarity.on:hover{
 	background: grey;
+	cursor: pointer;
 }
 #clarity.on{
-	background: var(--bg-color);
+	background: rgba(0,0,0,0.6);
 	/* border: solid 1px black; */
 	/* color: black; */
+}
+#clarity.on span{
+	display: none;
+}
+
+#clarity.on::after{
+	content:'no soil';
 }
 
 #ground.groundless{
@@ -260,6 +268,10 @@ nav a{
 	line-height: 1;
 }
 
+nav a:hover{
+	color:coral;
+}
+
 #signs a{
 	line-height: 1;
 }
@@ -274,6 +286,25 @@ nav h2{
 	font-size: 0.9em;
 	line-height: 1.1;
 }
+
+#thoughts {
+	list-style-type:"❧ ";
+	padding-left: 2ch;
+	margin: 0;
+}
+
+#thoughts li{
+	padding-inline-start: 0ch;
+	font-size: 0.9em;
+	line-height: 1.2;
+	margin-bottom: 1ch;
+}
+/* #thoughts a{
+	text-decoration: none;
+}
+#thoughts a:hover{
+	text-decoration: underline;
+} */
 
 /* ABOUT */
 #gijsgarden div{
