@@ -240,7 +240,8 @@ body{
 
 .labeldef ol{
 	list-style: upper-roman inside;
-	padding: 0;
+	padding: 0px 12px;
+	
 }
 
 /* NAV */
@@ -443,7 +444,8 @@ nav label + a {
 }
 
 .faminfo ol{
-	/* list-style-type: upper-roman; */
+	list-style-type: decimal;
+	list-style-position: inside;
 }
 .faminfo li{
 	text-align: left;
