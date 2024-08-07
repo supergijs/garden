@@ -431,7 +431,7 @@ nav label + a {
 }
 
 .faminfo div {
-	background-color: inherit;
+	/* background-color: inherit; */
 	color: black;
 	/* max-height: 100vh; */
 	/* overflow: scroll; */
@@ -504,6 +504,11 @@ input[type="radio"] {
 	position: absolute;
 	left: -4em; /* Adjust this value to move the radio button further left if necessary */
 	top: 0;
+}
+
+hr{
+	border-style: solid;
+	border-width: 0.5px;;
 }
 
 button {
