@@ -522,7 +522,7 @@ a.tag{
 
 .plant img{
 	width: inherit;
-	min-width: 40px;
+	min-width: 5vh;
 	transition: 0.1s;
 }
 
