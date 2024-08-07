@@ -202,7 +202,7 @@ body{
 
 /* LABEL DEFINITIONS */
 
-.labeldef {
+.overlay {
 	position: absolute;
 	top:0;
 	bottom:0;
@@ -212,23 +212,35 @@ body{
 	z-index: 1000;
 }
 
-.labeldef:target{
+.overlay:target{
 	display: block;
 }
 
-.labeldef div{
+.overlay div{
 	position: absolute;
+	cursor: initial;
+	left: 50%;
+	transform: translate(-50%, 0);
+	text-align: center;
+
+}
+
+.labeldef {
+
+}
+
+.labeldef:target{
+}
+
+.labeldef div{
 	width: 25%;
 	max-width: 800px;
 	top: 50%;
-	left: 50%;
 	transform: translate(-50%,-50%);
 	padding: 1em;
 	background: var(--extracolor);
-	text-align: center;
 	color: floralwhite;
 	border: outset var(--extracolor) 3px;
-	cursor: initial;
 }
 
 .labeldef p{
@@ -420,7 +432,7 @@ nav label + a {
 .faminfo div {
 	background-color: inherit;
 	color: black;
-	max-height: 100vh;
+	/* max-height: 100vh; */
 	/* overflow: scroll; */
 	border: none;
 	min-width: 400px;
