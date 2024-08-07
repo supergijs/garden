@@ -496,7 +496,7 @@ a.tag{
 
 .quiz-image {
 	display: none;
-	max-width: 100%;
+	/* max-width: 100%; */
 	/* margin-top: 20px; */
 }
 
@@ -505,6 +505,27 @@ input[type="radio"] {
 	left: -4em; /* Adjust this value to move the radio button further left if necessary */
 	top: 0;
 }
+
+button {
+	background: inherit;
+	border: 1px solid black;
+	color: inherit;
+	font-size: 1em;
+	padding: 1em;
+	margin: 1em;
+	font-family: inherit;
+	cursor: pointer;
+}
+
+button:hover{
+	background-color: var(--bg-color);
+
+}
+
+#resultImage {
+	scroll-margin-bottom: 50px;
+}
+
 
 /* THE PLANTS */
 

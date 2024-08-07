@@ -245,6 +245,11 @@ function showResult() {
 
   imageElement.src = "images/futures/results/" + imageName;
   imageElement.style.display = "block";
+
+    // Scroll the image into view
+    imageElement.onload = function() {
+      imageElement.scrollIntoView({ behavior: 'smooth', block: 'end' });
+    };
 }
 
 // Lines between plants
