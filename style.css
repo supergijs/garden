@@ -368,13 +368,14 @@ a[name]:hover::after {
   }
 
 /* FAMILY TOGGLES */
+
 /* summary{
 	cursor: cell;
 }
 summary:hover,label:hover,a:hover{
   color: tomato;
 } */
-input {
+nav input {
 	display: none;
 }
 
@@ -456,11 +457,11 @@ nav label + a {
 }
 
 .faminfo ol{
+	text-align: left;
 	list-style-type: decimal;
 	list-style-position: inside;
 }
 .faminfo li{
-	text-align: left;
 	margin-bottom: 0.5em;
 }
 
@@ -491,6 +492,18 @@ a.tag{
 	color: green;
 	font-style: italic;	
 	cursor: crosshair;
+}
+
+.quiz-image {
+	display: none;
+	max-width: 100%;
+	/* margin-top: 20px; */
+}
+
+input[type="radio"] {
+	position: absolute;
+	left: -4em; /* Adjust this value to move the radio button further left if necessary */
+	top: 0;
 }
 
 /* THE PLANTS */

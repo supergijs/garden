@@ -1737,35 +1737,43 @@
       <p>To make the entanglements explicit, the legend reveals how different scenarios are part of the same world. If you have one, you get the others. So if you would land on the 'centre' scenario, it may raise critical questions on its inherent limits. If you find a home in a periphery or counterculture scenario, it may expose the blind spots of its radicals. Does the counterculture not rely on the same peripheral conditions? Does a local focus leave a power vacuum for global institutions to take charge?</p>
       <p>I like to find ways of using the seductions of control against itself, and hope this Future Compass may offer you both some recognition and some challenge. Although this publication is not an online thread with comments, I'm always curious to hear your thoughts on your Future and, in the spirit of memes, to see your version of the Compass.</p>
 
-      <h2>❧</h2>
+      <!-- <h2>❧</h2> -->
 
       <hr>
 
       <h2>Find your post-growth future</h2>
    
-      <p><em>Answer the following two questions. </em></p>
+      <p><em>First, answer the following two questions. </em></p>
         
-      <p><strong>What best describes how you see Nature?</strong></p>
+      <form id="quizForm">
+        <p><strong>What best describes how you see Nature?</strong></p>
         <ol style="list-style-type: upper-alpha;">
-          <li>Wilderness, a fragrant flower, a sprouting mushroom</li>
-          <li>A Life Source, a juicy apple, a fertile soil</li>
-          <li>Our Environment, a flowing river, a cool breeze</li>
-          <li>Life, myself, my kin, my phone</li>
+          <li><label><input type="radio" name="nature" value="A"> Wilderness, a fragrant flower, a sprouting mushroom</label></li>
+          <li><label><input type="radio" name="nature" value="B"> A Life Source, a juicy apple, a fertile soil</label></li>
+          <li><label><input type="radio" name="nature" value="C"> Our Environment, a flowing river, a cool breeze</label></li>
+          <li><label><input type="radio" name="nature" value="D"> Life, myself, my kin, my phone</label></li>
         </ol>
-      <p><strong>What best describes how you see our role as Humans?</strong></p>
+
+        <p><strong>What best describes how you see our role as Humans?</strong></p>
         <ol style="list-style-type: digits;">
-          <li>Designers, using science and tech to improve Nature’s workings</li>
-          <li>Farmers, turning Nature’s potential into precious produce</li>
-          <li>Gardeners, taking care of cultivating a thriving Nature</li>
-          <li>Foresters, listening closely to align with Nature’s wisdom</li>
-        </ol> 
+          <li><label><input type="radio" name="role" value="1"> Designers, using science and tech to improve Nature’s workings</label></li>
+          <li><label><input type="radio" name="role" value="2"> Farmers, turning Nature’s potential into precious produce</label></li>
+          <li><label><input type="radio" name="role" value="3"> Gardeners, taking care of cultivating a thriving Nature</label></li>
+          <li><label><input type="radio" name="role" value="4"> Foresters, listening closely to align with Nature’s wisdom</label></li>
+        </ol>
+
+        <button type="button" onclick="showResult()">Find Your Post-Growth Future</button>
+      </form>
+
+      <img id="resultImage" class="quiz-image" alt="Your Post-Growth Future">
+
         <p><em>Find your post-growth future based on your concept of nature (A-D from left to right) and human responsibility (1-4 from top to bottom).</em></p>
         <img src="images/futures/finalcompass.jpg" style="width: calc(100% - 24px);">
         <h5>Post-Growth Compass, click for <a href="images/futures/compassfull.png">full size</a>.</h5>
 
-        <p><em>Lastly, consult the Legend below to find out what World you've rolled into.</em></p>
-        <img src="images/futures/legend.jpg" style="width: 50%;" alt="">
-        <ol style="list-style-type: upper-roman;">
+        <p><em>Congratulations, you found the post-growth future best fit to you. But wait, consult the Legend below to find out what World you've rolled into.</em></p>
+        <img src="images/futures/legend.png" style="width: 50%;" alt="">
+        <ol style="list-style-type: upper-roman; text-align: center; padding-inline-start: 0;">
           <li>The <a class="tag" href="#power">World of Power</a></li>
           <li>The <a class="tag" href="#purity">World of Purity</a></li>
           <li>The <a class="tag" href="#fertility">World of Fertility</a></li>

@@ -231,7 +231,21 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+function showResult() {
+  const nature = document.querySelector('input[name="nature"]:checked')?.value;
+  const role = document.querySelector('input[name="role"]:checked')?.value;
 
+  if (!nature || !role) {
+      alert("Please answer both questions.");
+      return;
+  }
+
+  const imageName = nature + role + ".jpg";  // Assuming image names are like A1.jpg, B2.jpg, etc.
+  const imageElement = document.getElementById("resultImage");
+
+  imageElement.src = "images/futures/results/" + imageName;
+  imageElement.style.display = "block";
+}
 
 // Lines between plants
 
