@@ -230,6 +230,27 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// COMPASS GAME
+
+const worldMapping = {
+  "solidarity": ["C2", "D2", "C4"],
+  "power": ["A1", "A4", "B4"],
+  "wonder": ["C1", "A2", "C3"],
+  "purity": ["A3", "B2", "B3"],
+  "fertility": ["B1", "D1", "D4"],
+  "utopia": ["D3"]
+  // Add more world mappings as necessary
+};
+
+function getWorldForResult(resultKey) {
+  for (const world in worldMapping) {
+      if (worldMapping[world].includes(resultKey)) {
+          return world;
+      }
+  }
+  return null; // If no world matches the result
+}
+
 
 function showResult() {
   const nature = document.querySelector('input[name="nature"]:checked')?.value;
@@ -249,18 +270,41 @@ function showResult() {
     body: JSON.stringify({ nature: nature, role: role })
   });
 
+  const resultKey = nature + role;
   const imageName = nature + role + ".jpg";  // Assuming image names are like A1.jpg, B2.jpg, etc.
   const imageElement = document.getElementById("resultImage");
 
   imageElement.src = "images/futures/results/" + imageName;
   imageElement.style.display = "block";
 
-    // Scroll the image into view
-    imageElement.onload = function() {
-      imageElement.scrollIntoView({ behavior: 'smooth', block: 'end' });
-    };
+  // Show the "Reveal Your World" button after showing the result image
+  const revealButton = document.getElementById("revealWorldButton");
+  revealButton.style.display = "block";
+
+  // Store the result key so it can be used when revealing the world
+  revealButton.dataset.resultKey = resultKey;
+  
+  // Scroll the image into view
+  imageElement.onload = function() {
+    imageElement.scrollIntoView({ behavior: 'smooth', block: 'end' });
+  };
 }
 
+function revealWorld() {
+  const revealButton = document.getElementById("revealWorldButton");
+  const resultKey = revealButton.dataset.resultKey;
+  const world = getWorldForResult(resultKey);
+
+  if (world) {
+      const worldImageElement = document.getElementById("worldImage");
+      const worldImageName = world + ".jpg"; // Assuming the image is named after the world
+      worldImageElement.src = "images/futures/results/" + worldImageName;
+      worldImageElement.style.display = "block";
+      worldImageElement.scrollIntoView({ behavior: 'smooth', block: 'end' });
+  } else {
+      alert("No world found for this result.");
+  }
+}
 // Lines between plants
 
 // function getOffset( el ) {
