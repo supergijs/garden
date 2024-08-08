@@ -277,6 +277,10 @@ function showResult() {
   imageElement.src = "images/futures/results/" + imageName;
   imageElement.style.display = "block";
 
+  // Show the paragraph text
+  const resultText = document.getElementById("resultText");
+  resultText.style.display = "block";
+
   // Show the "Reveal Your World" button after showing the result image
   const revealButton = document.getElementById("revealWorldButton");
   revealButton.style.display = "block";
@@ -300,7 +304,24 @@ function revealWorld() {
       const worldImageName = world + ".jpg"; // Assuming the image is named after the world
       worldImageElement.src = "images/futures/results/" + worldImageName;
       worldImageElement.style.display = "block";
-      worldImageElement.scrollIntoView({ behavior: 'smooth', block: 'end' });
+
+      document.querySelectorAll('.world-info').forEach(info => {
+        info.style.display = 'none';
+      });
+
+      worldImageElement.onload = function() {
+
+        // worldImageElement.scrollIntoView({ behavior: 'smooth', block: 'end' });
+
+
+      // Show the corresponding world info text block
+      const worldInfoElement = document.getElementById(world + "Info");
+      if (worldInfoElement) {
+          worldInfoElement.style.display = "block";
+          worldInfoElement.scrollIntoView({ behavior: 'smooth', block: 'end' });
+      }
+      
+      };
   } else {
       alert("No world found for this result.");
   }

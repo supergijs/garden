@@ -1738,9 +1738,7 @@
       <p>As a critical reflection on the scenarios, I wanted to appropriate the Future Compass format by including some of the knots that exist between possible futures. I'm quite a fan of the world-building power of the captioned images in the compass, but how to shine a light on their shadows and entanglements? For each scenario, I tried to complexify the future imagined, by teasing out aspects that are less explicit or hidden in them. I first identified their central 'dramatic' value that would allow for a narrative to spin around, like ‘<a href="#purity" class="tag">purity</a>’ and ‘<a href="#fertility" class="tag">fertility</a>’. Based on this value, I speculated on one countercultural version of each scenario, and one periphery-scenario focused on the infrastructure that would make the scenario possible. This resulted in 15 sub-scenarios that could be your post-growth future. </p>
       <img src="images/futures/finalcompassmid.jpg" style="width: calc(100% - 24px);">
       <h5>Post-Growth Compass, click for <a href="images/futures/compassfull.png">full size</a>.</h5>
-      <p>To make the entanglements explicit, the legend reveals how different scenarios are part of the same world. If you have one, you get the others. So if you would land on the 'centre' scenario, it may raise critical questions on its inherent limits. If you find a home in a periphery or counterculture scenario, it may expose the blind spots of its radicals. Does the counterculture not rely on the same peripheral conditions of say, <a href="#solidarity" class="tag">interspecies AI</a>? Does a focus on the local leave a <a href="#power" class="tag">power vacuum</a> for global institutions to take charge?</p>
-      <p>I like to find ways of using the seductions of control against itself, and hope this Future Compass may offer you both some recognition and some challenge. Try it below. I'm always curious to <a href="mailto:info@supergijs.com">hear your thoughts</a> on your post-growth future and, in the spirit of memes, to see your version of the Compass.</p>
-      <br>
+
 
       <!-- <h2>❧</h2> -->
 
@@ -1770,18 +1768,44 @@
         <button type="button" onclick="showResult()">Find Your Post-Growth Future</button>
       </form>
 
-      <img id="resultImage" class="quiz-image" alt="Your Post-Growth Future">
+        <img id="resultImage" class="quiz-image" alt="Your Post-Growth Future">
 
-        <p><em>Find your post-growth future based on your concept of nature (A-D from left to right) and human responsibility (1-4 from top to bottom).</em></p>
-   
+        <p id="resultText" class="quiz-image" style="display: none;">
+          <em>Congratulations, you found the post-growth future best fit to you. But wait, that's not all, you've also rolled into a World.</em></p>
 
-        <p><em>Congratulations, you found the post-growth future best fit to you. But wait, consult the Legend below to find out what World you've rolled into.</em></p>
+        <button id="revealWorldButton" style="display:none;" onclick="revealWorld()">Reveal your World</button>
 
-        <button id="revealWorldButton" style="display:none;" onclick="revealWorld()">Reveal Your World</button>
         <img id="worldImage" style="display:none;" alt="Your World">  
+          <p id="solidarityInfo" class="world-info" style="display:none;">
+            Solidarity: This world emphasizes community, cooperation, and shared resources.
+          </p>
+          
+          <p id="powerInfo" class="world-info" style="display:none;">
+              Power: In this world, the focus is on leadership, influence, and technological advancements.
+          </p>
+          
+          <p id="wonderInfo" class="world-info" style="display:none;">
+              Wonder: A world filled with curiosity, exploration, and the beauty of the unknown.
+          </p>
+          
+          <p id="purityInfo" class="world-info" style="display:none;">
+              Serenity: This world offers peace, tranquility, and harmony with nature.
+          </p>
+        
+          <p id="fertilityInfo" class="world-info" style="display:none;">
+            Serenity: This world offers peace, tranquility, and harmony with nature.
+          </p>
 
-        <img src="images/futures/legend.png" style="width: 50%;" alt="">
-        <ol style="list-style-type: upper-roman; text-align: center; padding-inline-start: 0;">
+          <p id="utopiaInfo" class="world-info" style="display:none;">
+            Serenity: This world offers peace, tranquility, and harmony with nature.
+          </p>
+
+        <hr>
+
+        <p>To make the entanglements explicit, the legend reveals how different scenarios are part of the same world. If you have one, you get the others. So if you would land on the 'centre' scenario, it may raise critical questions on its inherent limits. If you find a home in a periphery or counterculture scenario, it may expose the blind spots of its radicals. Does the counterculture not rely on the same peripheral conditions of say, <a href="#solidarity" class="tag">interspecies AI</a>? Does a focus on the local leave a <a href="#power" class="tag">power vacuum</a> for global institutions to take charge?</p>
+
+        <img src="images/futures/legend2.png" style="width: 38%; display:inline-block" alt="">
+        <ol style="width: 50%; display:inline-block; list-style-type: upper-roman; text-align: center; padding-inline-start: 0; vertical-align: top;">
           <li>The <a class="tag" href="#power">World of Power</a></li>
           <li>The <a class="tag" href="#purity">World of Purity</a></li>
           <li>The <a class="tag" href="#fertility">World of Fertility</a></li>
@@ -1789,6 +1813,11 @@
           <li>The <a class="tag" href="#wonder">World of Wonder</a></li>
           <span>? Utopia (how exactly this world looks like, no one knows yet.)</span>
         </ol>
+        
+        <p>I like to find ways of using the seductions of control against itself, and hope this Future Compass may offer you both some recognition and some challenge. I'm always curious to <a href="mailto:info@supergijs.com">hear your thoughts</a> on your post-growth future and, in the spirit of memes, to see your version of the Compass.</p>
+        <br>
+
+
       <h2>❧</h2>
       <hr>
       <h2>References</h2>
