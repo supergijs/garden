@@ -511,6 +511,10 @@ hr{
 	border-width: 0.5px;;
 }
 
+ol.refs{
+	list-style-position: outside;
+}
+
 .faminfo button {
 	background: inherit;
 	border: 1px solid black;
