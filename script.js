@@ -240,6 +240,15 @@ function showResult() {
       return;
   }
 
+  fetch('https://script.google.com/macros/s/AKfycbwbPVNHisabJnm8KfnpMywRFuvlZjAmgd8Y7PBjeKEwAWQdiI-FK8F26IoqjJkva4qN/exec', {
+    method: 'POST',
+    mode: 'no-cors', // Avoids CORS errors, but doesn't provide feedback
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ nature: nature, role: role })
+  });
+
   const imageName = nature + role + ".jpg";  // Assuming image names are like A1.jpg, B2.jpg, etc.
   const imageElement = document.getElementById("resultImage");
 
