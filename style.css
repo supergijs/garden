@@ -511,7 +511,7 @@ hr{
 	border-width: 0.5px;;
 }
 
-button {
+.faminfo button {
 	background: inherit;
 	border: 1px solid black;
 	color: inherit;
