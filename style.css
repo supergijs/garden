@@ -494,10 +494,23 @@ a.tag{
 	cursor: crosshair;
 }
 
+
+/* QUIZ */
 .quiz-image {
 	display: none;
 	/* max-width: 100%; */
 	/* margin-top: 20px; */
+}
+
+#quizForm li:hover{
+	color: green;
+}
+
+/* #quizForm li::marker{
+	color: inherit;
+} */
+#quizForm li:hover::marker{
+	color: green;
 }
 
 input[type="radio"] {
@@ -558,7 +571,7 @@ ol.refs{
 .world-info em{
 	text-transform: capitalize;
 	font-size: 1.2em;
-	
+
 }
 
 /* THE PLANTS */
