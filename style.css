@@ -526,15 +526,40 @@ ol.refs{
 	cursor: pointer;
 }
 
-button:hover{
+.faminfo button:disabled{
+	color: rgba(0,0,0,0.5);
+	border-color: rgba(0,0,0,0.5);
+}
+
+.faminfo button:disabled:hover{
+	background: inherit;
+	cursor: default;
+}
+
+.faminfo button:hover{
 	background-color: var(--bg-color);
 
 }
 
-#resultImage {
+#resultImage, .world-info, .faminfo button {
 	scroll-margin-bottom: 50px;
 }
 
+#resultImage{
+	width:50%;
+}
+
+.faminfo .world-info{
+	text-align: center;
+	width: 80%;
+	/* font-style: italic; */
+}
+
+.world-info em{
+	text-transform: capitalize;
+	font-size: 1.2em;
+	
+}
 
 /* THE PLANTS */
 

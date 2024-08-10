@@ -232,6 +232,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // COMPASS GAME
 
+document.addEventListener('DOMContentLoaded', function() {
+    const showResultButton = document.getElementById('showResultButton');
+    const natureInputs = document.querySelectorAll('input[name="nature"]');
+    const roleInputs = document.querySelectorAll('input[name="role"]');
+
+
+    function checkFormCompletion() {
+      const isNatureSelected = Array.from(natureInputs).some(input => input.checked);
+      const isRoleSelected = Array.from(roleInputs).some(input => input.checked);
+      
+      showResultButton.disabled = !(isNatureSelected && isRoleSelected);
+    }
+
+    natureInputs.forEach(input => {
+      input.addEventListener('change', checkFormCompletion);
+  });
+
+  roleInputs.forEach(input => {
+      input.addEventListener('change', checkFormCompletion);
+  });
+});
+
 const worldMapping = {
   "solidarity": ["C2", "D2", "C4"],
   "power": ["A1", "A4", "B4"],
@@ -251,15 +273,24 @@ function getWorldForResult(resultKey) {
   return null; // If no world matches the result
 }
 
+function resetWorldImageAndInfo() {
+  document.getElementById('worldImage').style.display = 'none';
+  document.querySelectorAll('.world-info').forEach(info => {
+      info.style.display = 'none';
+  });
+}
 
 function showResult() {
   const nature = document.querySelector('input[name="nature"]:checked')?.value;
   const role = document.querySelector('input[name="role"]:checked')?.value;
 
   if (!nature || !role) {
-      alert("Please answer both questions.");
+      // alert("Please answer both questions.");
       return;
   }
+
+
+  resetWorldImageAndInfo();
 
   fetch('https://script.google.com/macros/s/AKfycbwbPVNHisabJnm8KfnpMywRFuvlZjAmgd8Y7PBjeKEwAWQdiI-FK8F26IoqjJkva4qN/exec', {
     method: 'POST',
@@ -275,22 +306,22 @@ function showResult() {
   const imageElement = document.getElementById("resultImage");
 
   imageElement.src = "images/futures/results/" + imageName;
-  imageElement.style.display = "block";
+  imageElement.style.display = "inline-block";
 
   // Show the paragraph text
   const resultText = document.getElementById("resultText");
-  resultText.style.display = "block";
+  resultText.style.display = "inline-block";
 
   // Show the "Reveal Your World" button after showing the result image
   const revealButton = document.getElementById("revealWorldButton");
-  revealButton.style.display = "block";
+  revealButton.style.display = "inline-block";
 
   // Store the result key so it can be used when revealing the world
   revealButton.dataset.resultKey = resultKey;
   
   // Scroll the image into view
   imageElement.onload = function() {
-    imageElement.scrollIntoView({ behavior: 'smooth', block: 'end' });
+    revealButton.scrollIntoView({ behavior: 'smooth', block: 'end' });
   };
 }
 
@@ -303,7 +334,7 @@ function revealWorld() {
       const worldImageElement = document.getElementById("worldImage");
       const worldImageName = world + ".jpg"; // Assuming the image is named after the world
       worldImageElement.src = "images/futures/results/" + worldImageName;
-      worldImageElement.style.display = "block";
+      worldImageElement.style.display = "inline-block";
 
       document.querySelectorAll('.world-info').forEach(info => {
         info.style.display = 'none';
@@ -314,18 +345,23 @@ function revealWorld() {
         // worldImageElement.scrollIntoView({ behavior: 'smooth', block: 'end' });
 
 
-      // Show the corresponding world info text block
-      const worldInfoElement = document.getElementById(world + "Info");
-      if (worldInfoElement) {
-          worldInfoElement.style.display = "block";
-          worldInfoElement.scrollIntoView({ behavior: 'smooth', block: 'end' });
-      }
-      
+        // Show the corresponding world info text block
+        const worldInfoElement = document.getElementById(world + "Info");
+        if (worldInfoElement) {
+            worldInfoElement.style.display = "inline-block";
+            worldInfoElement.scrollIntoView({ behavior: 'smooth', block: 'end' });
+        }
+        
       };
   } else {
       alert("No world found for this result.");
   }
 }
+
+
+
+
+
 // Lines between plants
 
 // function getOffset( el ) {
