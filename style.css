@@ -348,6 +348,7 @@ a[name] {
 	text-decoration: none;
 	font-style: italic;
 	cursor: help;
+	line-height: normal;
   }
 a[name]:active{
 	/* pointer-events: none; */
@@ -381,8 +382,8 @@ nav input {
 
 .btn {
 	display: inline-block;
-	height: 12px;
-	width: 12px;
+	height: 1.5ch;
+	width: 1.5ch;
 	margin-right: 3px;
 	border-radius: 6px;
 	border: 1px solid black;
@@ -403,7 +404,7 @@ label:hover > input:checked + .btn {
 }
 
 label {
-	display: inline-block;
+	/* display: inline-block; */
 	position: relative;
 	cursor: pointer;
 	font-size: 0.9em;
@@ -504,6 +505,10 @@ a.tag{
 
 #quizForm li:hover{
 	color: green;
+}
+
+#quizForm label{
+	font-size: inherit;
 }
 
 /* #quizForm li::marker{
